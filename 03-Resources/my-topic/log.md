@@ -278,6 +278,9 @@ Saved article from index.html to [[2026-04-24-tinet-tecs--index]].
 Saved article from index.html to [[2026-04-24-tlsf-tecs--index]].
 
 
+## [2026-04-24] query | cdl-kakikata
+Answered "CDLの書き方を教えて". Referenced 8 pages. Filed to [[2026-04-24-cdl-kakikata]].
+
 ## [2026-04-24] query | celltype-toha-nanika
 Answered "セルタイプとは何ですか". Referenced 7 pages. Filed to [[2026-04-24-celltype-toha-nanika]].
 
