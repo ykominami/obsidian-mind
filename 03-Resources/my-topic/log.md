@@ -12,3 +12,6 @@ tags:
 ## [YYYY-MM-DD] ingest | Title
 One-line description.
 -->
+
+## [2026-04-24] ingest | TECS マニュアル
+Saved article from e:\Crepo\github-toppers\tecs-docs\docs\_build\html\index.html to [[2026-04-24-tecs-manual-index]].
