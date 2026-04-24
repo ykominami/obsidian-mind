@@ -278,5 +278,8 @@ Saved article from index.html to [[2026-04-24-tinet-tecs--index]].
 Saved article from index.html to [[2026-04-24-tlsf-tecs--index]].
 
 
+## [2026-04-24] query | cell-toha-nanika
+Answered "セルとは何ですか". Referenced 5 pages. Filed to [[2026-04-24-cell-toha-nanika]].
+
 ## [2026-04-24] compile | 88 sources → 133 pages
 Compiled 88 raw sources. Created 88 source-summary pages + 45 concept pages. Updated 0 concept pages. Backlink fixes: 41.
