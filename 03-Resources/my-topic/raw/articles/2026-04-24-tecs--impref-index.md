@@ -3,7 +3,7 @@ date: 2026-04-24
 source-type: article
 source-url: E:\Crepo\github-toppers\tecs-docs\docs\_build\html\tecs\IMPref_index.html
 title: TECS コンポーネント実装モデル
-compiled: false
+compiled: true
 tags: [tecs, toppers, documentation]
 description: "TECS ドキュメント: TECS コンポーネント実装モデル"
 ---

@@ -3,7 +3,7 @@ date: 2026-04-24
 source-type: article
 source-url: E:\Crepo\github-toppers\tecs-docs\docs\_build\html\tecs\CDLref_index.html
 title: TECS コンポーネント記述言語 (TECS CDL)
-compiled: false
+compiled: true
 tags: [tecs, toppers, documentation]
 description: "TECS ドキュメント: TECS コンポーネント記述言語 (TECS CDL)"
 ---

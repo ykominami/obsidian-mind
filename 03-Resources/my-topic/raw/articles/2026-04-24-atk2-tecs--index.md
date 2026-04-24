@@ -3,7 +3,7 @@ date: 2026-04-24
 source-type: article
 source-url: E:\Crepo\github-toppers\tecs-docs\docs\_build\html\atk2+tecs\index.html
 title: ATK2+TECS
-compiled: false
+compiled: true
 tags: [tecs, toppers, documentation]
 description: "TECS ドキュメント: ATK2+TECS"
 ---
