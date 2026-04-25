@@ -10,6 +10,9 @@ tags:
 
 Custom slash commands, subagents, and reusable workflows. Defined in `.claude/commands/` and `.claude/agents/`.
 
+> [!info] Multi-Agent Compatibility
+> This vault works as persistent memory for Claude Code, **Codex CLI**, and **Gemini CLI** — not just Claude. All three can read and write to the same vault. Source: [breferrari/obsidian-mind](https://github.com/breferrari/obsidian-mind)
+
 ## Slash Commands
 
 ### Daily Workflow

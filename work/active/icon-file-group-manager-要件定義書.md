@@ -1,3 +1,12 @@
+---
+date: 2026-04-26
+description: "アイコンファイル管理システム（icon-file-group-manager）の要件定義書 — グループ管理・スナップショット履歴・条件コピー機能"
+project: icon-file-group-manager
+status: active
+tags:
+  - work-note
+---
+
 # 要件定義書
 
 ## はじめに
@@ -130,3 +139,8 @@
 3. WHEN データを読み込む場合、THE Manager SHALL 指定されたストレージパスからデータを読み込む。
 4. IF 保存先のファイルが破損している場合、THEN THE Manager SHALL エラーを返す。
 5. THE Manager SHALL 保存・読み込みにおいてデータの整合性を保証する（保存したデータを読み込むと同一のデータが復元される）。
+
+## Related
+
+- [[cpiconfiles]] — ICONファイル管理システム本体
+- [[work/Index|Work Index]]
