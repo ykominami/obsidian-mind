@@ -1,4 +1,5 @@
 ---
+date: 2026-04-25
 description: "Vault-specific workflows and slash commands — reusable patterns for review prep, project tracking, and vault maintenance"
 tags:
   - brain
@@ -102,6 +103,20 @@ Subagents run in isolated context windows via `.claude/agents/`. They don't poll
 | PreCompact | Before context compaction | Back up session transcript to `thinking/session-logs/` |
 | Stop | End of session | Checklist: archive, update indexes, check orphans |
 
+## LLM Wiki (`llm-wiki:wiki`)
+
+Obsidian vault 内に永続的な知識ベースを構築・管理するスキル。
+
+| コマンド | 説明 |
+|----------|------|
+| `init <name>` | 新しい wiki を作成 |
+| `ingest <path\|url>` | ソース（ファイルまたは URL）を取り込む |
+| `compile [<path>]` | raw ソースから wiki ページを生成 |
+| `query <question>` | wiki に対して質問し回答を得る |
+| `lint` | wiki の整合性チェックと修正 |
+
+現在 `03-Resources/my-topic/` に TECS wiki を運用中。詳細は [[03-Resources/my-topic/CLAUDE]] 参照。
+
 ## Semantic Search (QMD)
 
 If QMD is installed (`npm install -g @tobilu/qmd`), the vault has semantic search:
@@ -135,3 +150,9 @@ SessionStart hook runs `qmd update` automatically. See `.claude/skills/qmd/SKILL
 2. **`/peer-scan`** (if needed) — understand what teammates have already built
 3. Create work note from gathered context
 4. **`/vault-audit`** — ensure everything links properly
+
+## 関連
+
+- [[North Star]] — 現在のフォーカスと目標
+- [[Patterns]] — 繰り返し発見されたワークフローパターン
+- [[Memories]] — 記憶トピック一覧

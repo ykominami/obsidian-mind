@@ -17,7 +17,20 @@ A living document of goals, aspirations, and current focus areas. Both you and C
 
 # TOPPERSプロジェクトのTECS開発(TECS WG関連)
 ## tecsgen
+- 外部仕様作成
+- 内部仕様作成
+- リファクタリング
+- 新機能追加
+- テスト仕様・テストプログラム作成
+- ユーザ向けドキュメント作成
 ## TECSCDE
+- 外部仕様・内部仕様
+- JavaScript版（フレームワーク非依存）外部仕様
+- JavaScript版（フレームワーク依存）外部仕様・内部仕様・実装・テスト仕様・テストプログラム
+## 各種関連ツール
+- tecsmerge
+- RubyScriptAnalyzer
+- TECS向けLSPサーバ
 ## ドキュメント作成
 ### TECS仕様書
 ### ツール仕様書
@@ -26,15 +39,15 @@ A living document of goals, aspirations, and current focus areas. Both you and C
 ## NotebookML管理システム
 ### NotebookMLソース管理システム
 ## 関連ドキュメント管理システム
-### ドキュメント管理システム(bookinfor-書籍・Kindle・ドキュメント・APIキー管理-Railsアプリ)
-### bookmark管理システム(bookmarkr - Google Chromeのブックマーク、OneTab機能拡張)
-### bookmark管理拡張機能(bmx - Google Chrome用機能拡張)
-### Calibre用documentメタデータ抽出システム(calibrex - calibre DBから)
-### Gist管理システム(gistx)
-### Githubリポジトリ管理システム(ghrepo)
-### gitリポジトリ管理システム(gitreporemote)
-### ICONファイル管理システム(cpiconfiles)
-### ファイル管理システム(filelist)
+### ドキュメント管理システム([[bookinfor]]-書籍・Kindle・ドキュメント・APIキー管理-Railsアプリ)
+### bookmark管理システム([[bookmarkr]] - Google Chromeのブックマーク、OneTab機能拡張)
+### bookmark管理拡張機能([[bmx]] - Google Chrome用機能拡張)
+### Calibre用documentメタデータ抽出システム([[calibrex]] - calibre DBから)
+### Gist管理システム([[gistx]])
+### Githubリポジトリ管理システム([[ghrepo]])
+### gitリポジトリ管理システム([[gitreporemote]])
+### ICONファイル管理システム([[cpiconfiles]])
+### ファイル管理システム([[filelist]])
 ### Google Drive用ファイルアップロードプログラム(gupload)
 ## HTMLドキュメント解析システム(htmlparser)
 ### Amazon注文履歴モジュール(amazonorderscraper)

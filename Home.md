@@ -20,7 +20,7 @@ tags:
 
 ## Quick Links
 
-- [[Index|Work Notes]] | [[People & Context]] | [[Brag Doc]]
+- [[work/Index|Work Notes]] | [[People & Context]] | [[Brag Doc]]
 - [[Memories]] | [[North Star]] | [[Skills]]
 
 ## Recent 1:1s

@@ -1,0 +1,23 @@
+# Gemini - Projects
+- 　PoserShell開発
+- 　WASM開発
+- 　Mac開発
+- 　Rust開発
+- 　Android開発
+- 　WEB開発
+- 　VCS
+- 数学
+- 　Chrome機能拡張開発
+- 　DeepResearch
+- 　Windows開発
+- 　画像生成
+- ETC
+- 　英日翻訳
+- 　日英翻訳
+- JavaScript開発
+- 　UNIX開発
+- 　GAS開発
+- 　AI活用-docs
+- 　Ruby開発
+- 　Python開発
+- 　AI開発
