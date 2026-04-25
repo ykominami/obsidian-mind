@@ -11,7 +11,12 @@ This vault has [obsidian-skills](https://github.com/kepano/obsidian-skills) inst
 - **json-canvas**: Create `.canvas` files with nodes, edges, and visual layouts. See `references/EXAMPLES.md`.
 - **obsidian-bases**: Create `.base` files with views, filters, and formulas. Bases core plugin is enabled. See `references/FUNCTIONS_REFERENCE.md`.
 - **defuddle**: Extract clean markdown from web pages via `defuddle parse <url> --md`.
-- **qmd**: Semantic search across the vault via [QMD](https://github.com/tobi/qmd). Use PROACTIVELY before reading files -- `qmd query "..."` for hybrid search, `qmd search "..."` for keyword, `qmd vsearch "..."` for semantic. Falls back to grep/glob if QMD not installed.
+- **qmd**: Semantic search across the vault via [QMD](https://github.com/tobi/qmd). Use PROACTIVELY before reading files. **Preference order — pick the highest surface available and stop:**
+  1. **`mcp__qmd__query`, `mcp__qmd__get`, `mcp__qmd__multi_get`, `mcp__qmd__status`** — registered MCP tools. If you see them in your tool menu, they are live and pre-scoped to this vault's index. Use them first; no `--index` argument needed.
+  2. **`qmd --index <name> query|search|vsearch|get|multi-get`** — CLI fallback for one-off shell checks or when the MCP server is unavailable. Always pass `--index <name>` where `<name>` is the `qmd_index` field from `vault-manifest.json` so the SQLite store stays isolated from other vaults on the machine.
+  3. **Grep / Glob / Read** — last resort, only when QMD is not installed at all.
+
+  The MCP server (`.mcp.json` → `.claude/scripts/qmd-mcp.mjs`), the CLI, and the SessionStart hook all read the same manifest field, so every surface scopes to the same store. On a fresh clone, run `node --experimental-strip-types scripts/qmd-bootstrap.ts` once to build the index.
 
 ### Custom Slash Commands
 
@@ -19,28 +24,31 @@ Defined in `.claude/commands/`. See [[Skills]] for full documentation.
 
 | Command | Purpose |
 |---------|---------|
-| `/standup` | Morning kickoff -- load context, review yesterday, surface tasks, priorities |
-| `/dump` | Freeform capture -- dump anything, gets routed to the right notes |
-| `/wrap-up` | Full session review -- verify notes, indexes, links, suggest improvements |
-| `/humanize` | Voice-calibrated editing -- make notes sound like you, not AI |
-| `/weekly` | Weekly synthesis -- cross-session patterns, North Star alignment, uncaptured wins |
-| `/capture-1on1` | Capture 1:1 meeting transcript into structured vault note |
-| `/incident-capture` | Capture incident from Slack channels/DMs into structured vault notes |
-| `/slack-scan` | Deep scan Slack channels/DMs for evidence |
-| `/peer-scan` | Deep scan a peer's GitHub PRs for review prep |
-| `/review-brief` | Generate review brief (manager or peer version) |
-| `/self-review` | Write self-assessment for review tool -- projects, competencies, principles |
-| `/review-peer` | Write peer review -- projects, principles, performance summary |
-| `/vault-audit` | Audit indexes, links, orphans, stale context |
-| `/vault-upgrade` | Import content from an existing vault into this obsidian-mind instance |
-| `/project-archive` | Move completed project from active/ to archive/, update indexes |
+| `/om-standup` | Morning kickoff -- load context, review yesterday, surface tasks, priorities |
+| `/om-dump` | Freeform capture -- dump anything, gets routed to the right notes |
+| `/om-wrap-up` | Full session review -- verify notes, indexes, links, suggest improvements |
+| `/om-humanize` | Voice-calibrated editing -- make notes sound like you, not AI |
+| `/om-weekly` | Weekly synthesis -- cross-session patterns, North Star alignment, uncaptured wins |
+| `/om-capture-1on1` | Capture 1:1 meeting transcript into structured vault note |
+| `/om-incident-capture` | Capture incident from Slack channels/DMs into structured vault notes |
+| `/om-slack-scan` | Deep scan Slack channels/DMs for evidence |
+| `/om-peer-scan` | Deep scan a peer's GitHub PRs for review prep |
+| `/om-review-brief` | Generate review brief (manager or peer version) |
+| `/om-self-review` | Write self-assessment for review tool -- projects, competencies, principles |
+| `/om-review-peer` | Write peer review -- projects, principles, performance summary |
+| `/om-vault-audit` | Audit indexes, links, orphans, stale context |
+| `/om-vault-upgrade` | Import content from an existing vault into this obsidian-mind instance |
+| `/om-prep-1on1` | Prep for an upcoming 1:1 -- load person context, open items, suggested agenda |
+| `/om-meeting` | Prep for any meeting by topic -- subject-forward briefing with open items and considerations |
+| `/om-intake` | Process meeting notes inbox -- classify and route to the right vault notes |
+| `/om-project-archive` | Move completed project from active/ to archive/, update indexes |
 
 ## Vault Structure
 
 | Folder | Purpose | Key Files |
 |--------|---------|-----------|
 | `Home.md` | **Vault entry point** -- embedded Base views, quick links | Open this first |
-| `vault-manifest.json` | **Template metadata** -- version, infrastructure vs user content boundaries, frontmatter schemas, version fingerprints | Used by `/vault-upgrade` for migration |
+| `vault-manifest.json` | **Template metadata** -- version, infrastructure vs user content boundaries, frontmatter schemas, version fingerprints | Used by `/om-vault-upgrade` for migration |
 | `CHANGELOG.md` | **Version history** -- tracks template releases (v1--v3.3) with what changed | Reference for upgrade paths |
 | `bases/` | **All Bases centralized** -- dynamic views for navigation | `Work Dashboard`, `Incidents`, `People Directory`, `1-1 History`, `Review Evidence`, `Competency Map`, `Templates` |
 | `work/` | Work notes index | `Index.md` (detailed MOC) |
@@ -48,6 +56,7 @@ Defined in `.claude/commands/`. See [[Skills]] for full documentation.
 | `work/archive/YYYY/` | Completed work organized by year | Grows over time |
 | `work/incidents/` | Incident docs (main note + RCA + deep dive + drafts) | Per-incident grouping |
 | `work/1-1/` | 1:1 meeting notes (accumulate weekly) | Named `<Person> YYYY-MM-DD.md` |
+| `work/meetings/` | **Meeting notes inbox** -- staging area for raw exports, processed by `/om-intake` | Drop files, run `/om-intake` |
 | `perf/` | Performance framework, brag doc | `Brag Doc.md` (index) |
 | `perf/brag/` | Quarterly brag notes | One per quarter, e.g. `Q1 2025.md` |
 | `perf/competencies/` | Atomic competency notes (link targets) | One note per competency |
@@ -60,9 +69,9 @@ Defined in `.claude/commands/`. See [[Skills]] for full documentation.
 | `reference/` | Codebase knowledge, architecture maps | Flow docs, architecture docs |
 | `thinking/` | Scratchpad for drafts and reasoning | Named `YYYY-MM-DD-topic.md` |
 | `templates/` | Obsidian templates | `Work Note.md`, `Decision Record.md`, etc. |
-| `.claude/commands/` | 15 slash commands | See command table above |
+| `.claude/commands/` | 18 slash commands | See command table above |
 | `.claude/agents/` | 9 subagents | See subagents table below |
-| `.claude/scripts/` | Hook scripts | `session-start.sh`, `classify-message.py`, `validate-write.py`, `pre-compact.sh` |
+| `.claude/scripts/` | Hook scripts | `session-start.ts`, `classify-message.ts`, `validate-write.ts`, `pre-compact.ts`, `stop-checklist.ts`, `charcount.ts` |
 | `.claude/skills/` | Obsidian + QMD skills | Loaded automatically via Skill tool |
 
 ## Obsidian CLI
@@ -90,7 +99,7 @@ obsidian orphans                                   # Unlinked notes
 
 The `SessionStart` hook automatically injects rich context: vault file listing, North Star goals, active work, recent git changes, open tasks, and triggers a QMD re-index. Most context is already loaded -- you don't need to manually read files.
 
-**Shortcut**: Run `/standup` for a structured morning kickoff that reads everything and presents a summary with suggested priorities.
+**Shortcut**: Run `/om-standup` for a structured morning kickoff that reads everything and presents a summary with suggested priorities.
 
 If doing it manually:
 
@@ -102,11 +111,11 @@ If doing it manually:
 
 ### Ending a Substantial Session
 
-**When the user says "wrap up", "let's wrap", "wrapping up", or similar -- invoke `/wrap-up` automatically.** This runs a full review of the session.
+**When the user says "wrap up", "let's wrap", "wrapping up", or similar -- invoke `/om-wrap-up` automatically.** This runs a full review of the session.
 
-If `/wrap-up` is not invoked, at minimum do these before wrapping up:
+If `/om-wrap-up` is not invoked, at minimum do these before wrapping up:
 
-1. **Archive completed projects**: `git mv` from `work/active/` to `work/archive/YYYY/`, update `status: completed` (or use `/project-archive`)
+1. **Archive completed projects**: `git mv` from `work/active/` to `work/archive/YYYY/`, update `status: completed` (or use `/om-project-archive`)
 2. Update `work/Index.md` if new notes or decisions were created
 3. Update the relevant brain topic note (`brain/Key Decisions.md`, `brain/Patterns.md`, `brain/Gotchas.md`) with key learnings
 4. Update `org/People & Context.md` if org knowledge changed
@@ -114,7 +123,7 @@ If `/wrap-up` is not invoked, at minimum do these before wrapping up:
 6. Offer to update `brain/North Star.md` if goals shifted or new focus emerged
 7. Verify all new notes link to at least one existing note (orphans are bugs)
 8. If work demonstrates competencies, add competency links to the work note's `## Related`
-9. Run `/vault-audit` if the session created many notes
+9. Run `/om-vault-audit` if the session created many notes
 
 Skip steps that don't apply. The goal is transferring durable knowledge from conversation to vault state.
 
@@ -146,7 +155,7 @@ Use `thinking/` for drafts, reasoning, and analysis before writing final notes. 
    - Claude operational context -- `brain/`
    - Codebase knowledge -- `reference/`
    - Drafts -- `thinking/`
-   - Vault root: `Home.md`, `CLAUDE.md`, `vault-manifest.json`, `CHANGELOG.md`, `CONTRIBUTING.md`, `README.md`, `LICENSE`, `.gitignore`. No user notes at root.
+   - Vault root: `Home.md`, `CLAUDE.md`, `AGENTS.md`, `GEMINI.md`, `vault-manifest.json`, `CHANGELOG.md`, `CONTRIBUTING.md`, `README.md`, `LICENSE`, `.gitignore`. No user notes at root.
 4. **Name files descriptively.** Use the note title as filename.
 
 ### Note Types
@@ -266,6 +275,15 @@ When asked to "remember" something:
 3. Update `brain/Memories.md` index if a new topic note was created
 4. Do NOT create additional files in `~/.claude/projects/.../memory/` beyond MEMORY.md -- they are not version-controlled
 
+### When to Consult Brain Topics
+
+The SessionStart hook injects a **Brain Topics (read on demand)** index listing each `brain/` topic note with its description and an `(empty)` marker for stub notes. Treat that index as a menu:
+
+- When the user's message touches a topic from the index (debugging → Gotchas, "how do we usually…" → Patterns, "why did we decide" → Key Decisions, "which command / slash" → Skills), query QMD **first** before answering — call `mcp__qmd__query` with a `query` argument describing the topic (or fall back to `qmd --index <name> query "<topic>"` if MCP is unavailable). The search covers the whole vault, so filter or prioritize results whose `file` path is under `brain/`. Do not assume the topic name alone scopes the search.
+- If QMD is unavailable, read the specific `brain/` note directly with the Read tool. Don't load all of `brain/` — only the one(s) matching the topic.
+- Skip notes marked `(empty)` in the index — they're stubs with no substantive content.
+- After answering, if the conversation produced durable knowledge, update the relevant brain note (see the "remember" workflow above).
+
 ## Agent Guidelines
 
 ### Graph-First Thinking
@@ -286,8 +304,8 @@ When asked to "remember" something:
 - **Deep scanning PRs for review?** -- `perf/evidence/`
 - **Creating review briefs?** -- `perf/<cycle>/`
 - **Tracking active project work?** -- `work/active/`
-- **Capturing an incident?** -- `work/incidents/` (use `/incident-capture`)
-- **Dumping unstructured info?** -- use `/dump` to auto-classify and route everything
+- **Capturing an incident?** -- `work/incidents/` (use `/om-incident-capture`)
+- **Dumping unstructured info?** -- use `/om-dump` to auto-classify and route everything
 
 ### Don't Mix Contexts
 
@@ -303,15 +321,15 @@ Specialized agents in `.claude/agents/` for heavy operations. They run in isolat
 
 | Agent | Purpose | Invoked by |
 |-------|---------|------------|
-| `brag-spotter` | Finds uncaptured wins and competency gaps | `/wrap-up`, `/weekly` |
+| `brag-spotter` | Finds uncaptured wins and competency gaps | `/om-wrap-up`, `/om-weekly` |
 | `context-loader` | Loads all vault context about a person, project, or concept | Direct |
-| `cross-linker` | Finds missing wikilinks, orphans, broken backlinks | `/vault-audit` |
-| `people-profiler` | Bulk creates/updates person notes from Slack profiles | `/incident-capture` |
-| `review-prep` | Aggregates all performance evidence for a review period | `/review-brief` |
-| `slack-archaeologist` | Full Slack reconstruction -- every message, thread, profile | `/incident-capture` |
-| `vault-librarian` | Deep vault maintenance -- orphans, broken links, stale notes | `/vault-audit` |
-| `review-fact-checker` | Verifies every claim in a review draft against vault sources | `/self-review`, `/review-peer` |
-| `vault-migrator` | Classifies, transforms, and migrates content from a source vault | `/vault-upgrade` |
+| `cross-linker` | Finds missing wikilinks, orphans, broken backlinks | `/om-vault-audit` |
+| `people-profiler` | Bulk creates/updates person notes from Slack profiles | `/om-incident-capture` |
+| `review-prep` | Aggregates all performance evidence for a review period | `/om-review-brief` |
+| `slack-archaeologist` | Full Slack reconstruction -- every message, thread, profile | `/om-incident-capture` |
+| `vault-librarian` | Deep vault maintenance -- orphans, broken links, stale notes | `/om-vault-audit` |
+| `review-fact-checker` | Verifies every claim in a review draft against vault sources | `/om-self-review`, `/om-review-peer` |
+| `vault-migrator` | Classifies, transforms, and migrates content from a source vault | `/om-vault-upgrade` |
 
 ## Hooks
 
@@ -320,10 +338,10 @@ Five lifecycle hooks in `.claude/settings.json`:
 | Hook | When | What |
 |------|------|------|
 | SessionStart | On startup/resume | QMD re-index, inject North Star, active work, recent changes, tasks, file listing |
-| UserPromptSubmit | Every message | Classifies content (decision, incident, win, 1:1, architecture, person) and injects routing hints |
-| PostToolUse | After writing `.md` | Validates frontmatter, checks for wikilinks, verifies folder placement |
+| UserPromptSubmit | Every message | Classifies content (decision, incident, win, 1:1, architecture, person, project update) and injects routing hints |
+| PostToolUse | After writing `.md` | Validates frontmatter, checks for wikilinks |
 | PreCompact | Before context compaction | Backs up session transcript to `thinking/session-logs/` |
-| Stop | End of every session | Lightweight checklist reminder: archive, update indexes, check orphans. For thorough review, use `/wrap-up` instead. |
+| Stop | End of every session | Lightweight checklist reminder: archive, update indexes, check orphans. For thorough review, use `/om-wrap-up` instead. |
 
 ## Rules
 

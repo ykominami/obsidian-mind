@@ -1,5 +1,75 @@
 # Changelog
 
+
+
+
+
+## v5.1 — 2026-04-19
+
+### Added
+- ARCHITECTURE.md, Obsidian-QMD ignore sync, lib cleanup, MCP-first
+- keep QMD index fresh mid-session via detached hooks
+- per-vault QMD named index, manifest-driven context, bootstrap
+
+### Fixed
+- resolve qmd MCP failure on Windows via Node wrapper
+- add .claude/scripts/.gitignore to block accidental node_modules commits
+
+## v5.0 — 2026-04-17
+
+### Added
+- register QMD as MCP and teach Claude to consult brain topics via QMD
+- inject brain topic index with empty-stub markers in SessionStart
+
+### Changed
+- migrate hook and tooling layer from Python to TypeScript (v5)
+- add roadmap section to translated READMEs (ja, ko, zh-CN)
+- require issue-first for bigger contributions
+- add roadmap section with Python to TypeScript migration notice
+- Merge docs/upgrade-guide: upgrade guide, quick start, release improvements
+- add upgrade guide and update quick start for multi-agent
+
+### Fixed
+- close manifest coverage gaps and prepare v5.0 release metadata
+- make hook commands cwd-independent via ${*_PROJECT_DIR:-.}
+
+## v4.0 — 2026-04-09
+
+### Changed
+- Merge feat/multi-agent-support: add Codex CLI and Gemini CLI support
+
+## v3.8 — 2026-04-09
+
+### Fixed
+- correct hook docs and add token efficiency section
+
+## v3.7 — 2026-04-08
+
+### Added
+- `/om-meeting` command — subject-forward meeting prep that searches the vault, surfaces open items and blockers, and brainstorms considerations beyond what's documented
+- `/om-intake` command — processes raw meeting exports dropped in `work/meetings/`, classifies content (1:1, project, decision, win, action item), and routes to the correct vault notes
+- `work/meetings/` inbox folder with README — staging area for raw meeting exports
+
+### Changed
+- **All 18 slash commands renamed to `om-` prefix** (e.g. `/standup` → `/om-standup`, `/dump` → `/om-dump`) for discoverability — type `/om-` to see all commands via autocomplete
+- Updated all cross-references in commands, agents, scripts, hooks, and docs to use new `om-` prefixed names
+- CLAUDE.md: updated command table (16→18 commands), added `work/meetings/` to vault structure
+- README + all translations (ja, ko, zh-CN): updated all command names, agent tables, workflow examples, and added 3 new commands
+- `brain/Skills.md`: updated all command names, added `/om-meeting` and `/om-intake` to Meeting Prep & Capture category
+- `.claude/settings.json`: updated Stop hook checklist to reference `/om-vault-audit`
+- `.claude/scripts/classify-message.py`: updated INCIDENT hint to reference `/om-incident-capture`
+- `vault-manifest.json`: updated version fingerprints for `om-` prefix detection
+
+## v3.6 — 2026-04-07
+
+### Added
+- `/prep-1on1` command — prep for an upcoming 1:1 by loading person context, recent history, active work, wins to share, and a suggested agenda. Run before the meeting; use `/capture-1on1` after.
+
+### Changed
+- CLAUDE.md: added `/prep-1on1` to command table (15→16 commands)
+- README: added `/prep-1on1` to commands table and vault structure diagram (15→16 commands)
+- `brain/Skills.md`: renamed "Capture & Documentation" category to "Meeting Prep & Capture", added `/prep-1on1`
+
 ## v3.5 — 2026-04-05
 
 ### Added

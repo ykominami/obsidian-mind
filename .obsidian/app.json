@@ -1,7 +1,11 @@
 {
-  "newFileLocation": "folder",
-  "newFileFolderPath": "Inbox",
-  "showLineNumber": true,
-  "showUnsupportedFiles": true,
-  "alwaysUpdateLinks": true
+  "userIgnoreFilters": [
+    "ARCHITECTURE.md",
+    "README.md",
+    "README.ja.md",
+    "README.ko.md",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md"
+  ]
 }

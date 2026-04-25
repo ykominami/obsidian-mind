@@ -1,31 +1,42 @@
 🌐 **English** | [日本語](README.ja.md) | [中文](README.zh-CN.md) | [한국어](README.ko.md)
 
-# 🧠 Obsidian Mind
+<p align="center">
+  <img src="obsidian-mind-logo.png" alt="Obsidian Mind" width="120">
+</p>
 
-[![Claude Code](https://img.shields.io/badge/claude%20code-required-D97706)](https://docs.anthropic.com/en/docs/claude-code)
+<h1 align="center">Obsidian Mind</h1>
+
+[![Claude Code](https://img.shields.io/badge/claude%20code-full%20support-D97706)](https://docs.anthropic.com/en/docs/claude-code)
+[![Codex CLI](https://img.shields.io/badge/codex%20cli-hooks%20%2B%20commands-10A37F)](https://github.com/openai/codex)
+[![Gemini CLI](https://img.shields.io/badge/gemini%20cli-hooks%20%2B%20commands-4285F4)](https://github.com/google-gemini/gemini-cli)
 [![Obsidian](https://img.shields.io/badge/obsidian-1.12%2B-7C3AED)](https://obsidian.md)
-[![Python](https://img.shields.io/badge/python-3.8%2B-3776AB)](https://python.org)
+[![Obsidian CLI](https://img.shields.io/badge/obsidian--cli-integrated-E6E6E6)](https://github.com/kepano/obsidian-cli)
+[![Obsidian Skills](https://img.shields.io/badge/obsidian--skills-integrated-8B5CF6)](https://github.com/kepano/obsidian-skills)
+[![QMD](https://img.shields.io/badge/qmd-semantic%20search-FF6B6B)](https://github.com/tobi/qmd)
+[![Node](https://img.shields.io/badge/node-22%2B-339933)](https://nodejs.org)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-> **An Obsidian vault that makes Claude Code remember everything.** Start a session, talk about your day, and Claude handles the rest — notes, links, indexes, performance tracking. Every conversation builds on the last.
+> **An Obsidian vault that gives AI coding agents persistent memory.** Built for Claude Code, with working hooks for Codex CLI and Gemini CLI. Start a session, talk about your day, and the agent handles the rest — notes, links, indexes, performance tracking. Every conversation builds on the last.
 
 ---
 
 ## 🔴 The Problem
 
-Claude Code is powerful, but it forgets. Every session starts from zero — no context on your goals, your team, your patterns, your wins. You re-explain the same things. You lose decisions made three conversations ago. The knowledge never compounds.
+AI coding agents are powerful, but they forget. Every session starts from zero — no context on your goals, your team, your patterns, your wins. You re-explain the same things. You lose decisions made three conversations ago. The knowledge never compounds.
 
 ## 🟢 The Solution
 
-Give Claude a brain.
+Give your agent a brain.
 
 ```
 You: "start session"
-Claude: *reads North Star, checks active projects, scans recent memories*
-Claude: "You're working on Project Alpha, blocked on the BE contract.
-         Last session you decided to split the coordinator. Your 1:1
-         with your manager is tomorrow — review brief is ready."
+Agent: *reads North Star, checks active projects, scans recent memories*
+Agent: "You're working on Project Alpha, blocked on the BE contract.
+        Last session you decided to split the coordinator. Your 1:1
+        with your manager is tomorrow — review brief is ready."
 ```
+
+Works with **Claude Code** (full support), **Codex CLI**, and **Gemini CLI** — same hooks, same commands, same vault.
 
 ---
 
@@ -38,7 +49,7 @@ Claude: "You're working on Project Alpha, blocked on the BE contract.
 **Morning kickoff:**
 
 ```bash
-/standup
+/om-standup
 # → loads North Star, active projects, open tasks, recent git changes
 # → "You have 2 active projects. The auth refactor is blocked on API contract.
 #    Your 1:1 with Sarah is at 2pm — last time she flagged observability."
@@ -47,7 +58,7 @@ Claude: "You're working on Project Alpha, blocked on the BE contract.
 **Brain dump after a meeting:**
 
 ```bash
-/dump Just had a 1:1 with Sarah. She's happy with the auth work but wants
+/om-dump Just had a 1:1 with Sarah. She's happy with the auth work but wants
 us to add error monitoring before release. Also, Tom mentioned the cache
 migration is deferred to Q2 — we decided to focus on the API contract first.
 Decision: defer Redis migration. Win: Sarah praised the auth architecture.
@@ -64,7 +75,7 @@ Decision: defer Redis migration. Win: Sarah praised the auth architecture.
 **Incident response:**
 
 ```bash
-/incident-capture https://slack.com/archives/C0INCIDENT/p123456
+/om-incident-capture https://slack.com/archives/C0INCIDENT/p123456
 # → slack-archaeologist reads every message, thread, and profile
 # → people-profiler creates notes for new people involved
 # → Full timeline, root cause analysis, brag doc entry
@@ -87,96 +98,148 @@ You: "wrap up"
 1. Clone this repo (or use it as a **GitHub template**)
 2. Open the folder as an **Obsidian vault**
 3. Enable the **Obsidian CLI** in Settings → General (requires Obsidian 1.12+)
-4. Run **`claude`** in the vault directory
+4. Run your agent in the vault directory: **`claude`**, **`codex`**, or **`gemini`**
 5. Fill in **`brain/North Star.md`** with your goals — this grounds every session
 6. Start talking about work
 
-### Optional: QMD Semantic Search
+### 🔍 Recommended: QMD Semantic Search
 
-For semantic search across the vault (find "what did we decide about caching" even if the note is titled "Redis Migration ADR"):
+QMD is where most of the agent's retrieval intelligence comes from. Optional in the strict sense — the vault falls back to grep + the Obsidian CLI — but the experience is meaningfully better with it:
+
+- **Semantic recall.** Find "what did we decide about caching" even when the note is titled "Redis Migration ADR."
+- **Brain topics available on demand.** Claude is instructed (via `CLAUDE.md`) to consult `brain/` guidance through QMD when the conversation touches a listed topic.
+- **Subagents get sharper context.** `context-loader`, `review-prep`, `brag-spotter`, and friends consult QMD first, then fall back to grep.
+- **Native agent tools via MCP.** Registered as a [Model Context Protocol](https://modelcontextprotocol.io) server in `.mcp.json` — when QMD is installed, `mcp__qmd__query`, `mcp__qmd__get`, and `mcp__qmd__multi_get` appear in the agent's tool menu alongside Read and Edit. Subagents, slash commands, and the main conversation all call the same typed contract. Add another MCP-aware tool later (a database, a ticketing system, a calendar) and it plugs in the same way.
 
 ```bash
 npm install -g @tobilu/qmd
-qmd collection add . --name vault --mask "**/*.md"
-qmd context add qmd://vault "Engineer's work vault: projects, decisions, incidents, people, reviews, architecture"
-qmd update && qmd embed
+node --experimental-strip-types scripts/qmd-bootstrap.ts
+```
+
+The bootstrap is idempotent — safe to re-run. It reads the `qmd_index` and `qmd_context` fields from `vault-manifest.json` (default index name: `obsidian-mind`), registers the collection, attaches the context, and builds the index + embeddings. The SessionStart hook and `.mcp.json` wrapper both read the same manifest field, so CLI queries, the MCP server, and the re-index all scope to the same named SQLite store. This isolates the vault from any other QMD-using vault on the same machine.
+
+If you want to use a different index name (for example, one vault per engineer on a shared workstation), edit `qmd_index` in `vault-manifest.json` before running the bootstrap. Once the store is populated, always pass `--index <name>` to the CLI:
+
+```bash
+qmd --index obsidian-mind query "what did we decide about caching"
+qmd --index obsidian-mind update   # after bulk edits
+qmd --index obsidian-mind embed    # after many new notes
 ```
 
 > [!NOTE]
-> If QMD isn't installed, everything still works — Claude falls back to the Obsidian CLI and grep.
+> First-time `qmd embed` downloads a ~328MB embedding model. `qmd query` (with LLM reranking) also downloads a ~1.28GB model on first use — skip it with `qmd search` (BM25) or `qmd vsearch` (semantic only) if you want to avoid the larger download.
+
+> [!NOTE]
+> If QMD isn't installed, everything still works — the agent falls back to grep and the Obsidian CLI, and the MCP server entry is skipped with a harmless warning.
 
 ---
 
 ## 📋 Requirements
 
 - [Obsidian](https://obsidian.md) 1.12+ (for CLI support)
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
-- Python 3 (for hook scripts)
+- An AI coding agent: [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (full support), [Codex CLI](https://github.com/openai/codex), or [Gemini CLI](https://github.com/google-gemini/gemini-cli)
+- [Node 22+ LTS](https://nodejs.org) (for hook scripts — typically already installed alongside Claude Code / Codex / Gemini CLI)
 - Git (for version history)
 - [QMD](https://github.com/tobi/qmd) (optional, for semantic search)
+
+> **Note on the Node flag.** Hook scripts execute TypeScript directly via Node's `--experimental-strip-types` flag, stable in Node 22.6+ (Aug 2024) and the default behaviour in Node 23.6+. The flag is marked experimental but has been unchanged across 22 LTS and 24 LTS; if a future Node release retires or renames it, hook commands in `.claude/settings.json`, `.codex/hooks.json`, and `.gemini/settings.json` need a one-line update.
 
 ---
 
 ## ⚙️ How It Works
 
-**Folders group by purpose. Links group by meaning.** A note lives in one folder (its home) but links to many notes (its context). Claude maintains this graph — linking work notes to people, decisions, and competencies automatically. When review season arrives, the backlinks on each competency note are already the evidence trail. A note without links is a bug.
+**Procedural code owns the environment. The agent owns content.** The hooks in `.claude/scripts/` handle classification, validation, indexing, and lifecycle injection — deterministic, testable, runs the same for every agent. Writing notes, filing them, linking them, drafting briefs — those are judgments, and they stay with the agent. The two halves meet at small handoffs (hooks inject context, agent reads the vault) so neither has to do the other's job.
+
+**Folders group by purpose. Links group by meaning.** A note lives in one folder (its home) but links to many notes (its context). Your agent maintains this graph — linking work notes to people, decisions, and competencies automatically. When review season arrives, the backlinks on each competency note are already the evidence trail. A note without links is a bug.
 
 **Vault-first memory** keeps context across sessions and machines. All durable knowledge lives in `brain/` topic notes (git-tracked, Obsidian-browsable, linked). Claude Code's `MEMORY.md` (`~/.claude/`) is an auto-loaded index that points to vault locations — never the storage itself. This means memories survive machine changes and are part of the graph.
 
-**Sessions have a designed lifecycle.** The `SessionStart` hook auto-injects your North Star goals, active projects, recent changes, open tasks, and the full vault file listing — Claude starts every session with context, not a blank slate. At the end, say "wrap up" and Claude runs `/wrap-up` — verifying notes, updating indexes, and spotting uncaptured wins. The 285-line `CLAUDE.md` governs everything in between: where to file things, how to link, when to split a note, what to do with decisions and incidents.
+**Sessions have a designed lifecycle.** The `SessionStart` hook auto-injects your North Star goals, active projects, recent changes, open tasks, and the full vault file listing — your agent starts every session with context, not a blank slate. At the end, say "wrap up" and the agent runs `/om-wrap-up` — verifying notes, updating indexes, and spotting uncaptured wins. The `CLAUDE.md` operating manual governs everything in between: where to file things, how to link, when to split a note, what to do with decisions and incidents.
 
-### Hooks
+### 🔗 Hooks
 
 Five lifecycle hooks handle routing automatically:
 
 | Hook | When | What |
 |------|------|------|
 | 🚀 SessionStart | On startup/resume | QMD re-index, inject North Star, active work, recent changes, tasks, file listing |
-| 💬 UserPromptSubmit | Every message | Classifies content (decision, incident, win, 1:1, architecture, person) and injects routing hints |
-| ✍️ PostToolUse | After writing `.md` | Validates frontmatter, checks for wikilinks, verifies folder placement |
+| 💬 UserPromptSubmit | Every message | Classifies content (decision, incident, win, 1:1, architecture, person, project update) and injects routing hints |
+| ✍️ PostToolUse | After writing `.md` | Validates frontmatter, checks for wikilinks |
 | 💾 PreCompact | Before context compaction | Backs up session transcript to `thinking/session-logs/` |
 | 🏁 Stop | End of session | Checklist: archive completed projects, update indexes, check orphans |
 
 > [!TIP]
 > You just talk. The hooks handle the routing.
 
+### ⚡ Token Efficiency
+
+obsidian-mind does **not** dump your entire vault into context. It uses tiered loading to keep token costs low:
+
+| Tier | What | When | Cost |
+|------|------|------|------|
+| **Always** | `CLAUDE.md` + SessionStart context (North Star excerpt, git summary, tasks, vault file listing) | Session start | ~2K tokens |
+| **On-demand** | QMD semantic search results | When the agent needs specific context | Targeted |
+| **Triggered** | Classification routing hints | Every message | ~100 tokens |
+| **Triggered** | PostToolUse validation | After `.md` writes | ~200 tokens |
+| **Rare** | Full file reads | Only when explicitly needed | Variable |
+
+SessionStart loads **lightweight context** — small excerpts from key files, filenames, and git summary — not full note contents. The agent queries by meaning via QMD before reading files, so it pulls only what's relevant. The classification hook is one lightweight Node call per message. The validation hook only fires on markdown writes and skips excluded paths.
+
+### 🌐 Using with Other Agents
+
+obsidian-mind works with Claude Code, Codex CLI, and Gemini CLI. The vault conventions in `CLAUDE.md`, the hook scripts in `.claude/scripts/`, and the 18 commands in `.claude/commands/` are all agent-agnostic — pure Markdown, TypeScript, and shell with no SDK dependencies.
+
+**Claude Code** — full support. Hooks, commands, subagents, and the memory system all work out of the box.
+
+**Codex CLI** — reads `AGENTS.md` natively. Hook config at `.codex/hooks.json` wires the same hook scripts Claude Code uses — session context, message classification, and write validation work automatically. Commands work as regular prompts (e.g. type `om-standup` without the `/` prefix).
+
+**Gemini CLI** — reads `GEMINI.md` natively. Hook config at `.gemini/settings.json` maps Gemini's event names to the shared hook scripts.
+
+**Other agents** (Cursor, Windsurf, GitHub Copilot, JetBrains AI) — read `AGENTS.md` for vault conventions. Hook support varies by agent.
+
+> [!NOTE]
+> Hooks, commands, subagent prompts, and vault memory (`brain/`) are all agent-agnostic. Only the `~/.claude/` auto-memory loader is Claude Code-specific. See `AGENTS.md` for the full portability guide.
+
 ---
 
 ## 📅 Daily Workflow
 
-**Morning**: Run `/standup`. Claude loads your North Star, active projects, open tasks, and recent changes. You get a structured summary and suggested priorities.
+**Morning**: Run `/om-standup`. Your agent loads your North Star, active projects, open tasks, and recent changes. You get a structured summary and suggested priorities.
 
-**Throughout the day**: Talk naturally. Mention a decision you made, an incident that happened, a 1:1 you just had, a win you want to remember. The classification hook nudges Claude to file each piece correctly. For bigger brain dumps, use `/dump` and narrate everything at once.
+**Throughout the day**: Talk naturally. Mention a decision you made, an incident that happened, a 1:1 you just had, a win you want to remember. The classification hook nudges the agent to file each piece correctly. For bigger brain dumps, use `/om-dump` and narrate everything at once.
 
-**End of day**: Say "wrap up" and Claude invokes `/wrap-up` — verifies notes, updates indexes, checks links, spots uncaptured wins.
+**End of day**: Say "wrap up" and the agent invokes `/om-wrap-up` — verifies notes, updates indexes, checks links, spots uncaptured wins.
 
-**Weekly**: Run `/weekly` for cross-session synthesis — North Star alignment, patterns, uncaptured wins, and next-week priorities. Run `/vault-audit` to catch orphan notes, broken links, and stale content.
+**Weekly**: Run `/om-weekly` for cross-session synthesis — North Star alignment, patterns, uncaptured wins, and next-week priorities. Run `/om-vault-audit` to catch orphan notes, broken links, and stale content.
 
-**Review season**: Run `/review-brief manager` and get a structured review prep document with all the evidence already linked.
+**Review season**: Run `/om-review-brief manager` and get a structured review prep document with all the evidence already linked.
 
 ---
 
 ## 🛠️ Commands
 
-Defined in `.claude/commands/`. Run them in any Claude Code session.
+Defined in `.claude/commands/`. Run them in Claude Code, Codex CLI, or Gemini CLI.
 
 | Command | What It Does |
 |---------|-------------|
-| `/standup` | Morning kickoff — loads context, reviews yesterday, surfaces tasks, suggests priorities |
-| `/dump` | Freeform capture — talk naturally about anything, Claude routes it all to the right notes |
-| `/wrap-up` | Full session review — verify notes, indexes, links, suggest improvements |
-| `/humanize` | Voice-calibrated editing — makes Claude-drafted text sound like you wrote it |
-| `/weekly` | Weekly synthesis — cross-session patterns, North Star alignment, uncaptured wins |
-| `/capture-1on1` | Capture a 1:1 meeting transcript into a structured vault note |
-| `/incident-capture` | Capture an incident from Slack/channels into structured notes |
-| `/slack-scan` | Deep scan Slack channels/DMs for evidence |
-| `/peer-scan` | Deep scan a peer's GitHub PRs for review prep |
-| `/review-brief` | Generate a review brief (manager or peer version) |
-| `/self-review` | Write your self-assessment for review season — projects, competencies, principles |
-| `/review-peer` | Write a peer review — projects, principles, performance summary |
-| `/vault-audit` | Audit indexes, links, orphans, stale context |
-| `/vault-upgrade` | Import content from an existing vault — version detection, classification, migration |
-| `/project-archive` | Move a completed project from active/ to archive/, update indexes |
+| `/om-standup` | Morning kickoff — loads context, reviews yesterday, surfaces tasks, suggests priorities |
+| `/om-dump` | Freeform capture — talk naturally about anything, routes it all to the right notes |
+| `/om-wrap-up` | Full session review — verify notes, indexes, links, suggest improvements |
+| `/om-humanize` | Voice-calibrated editing — makes Claude-drafted text sound like you wrote it |
+| `/om-weekly` | Weekly synthesis — cross-session patterns, North Star alignment, uncaptured wins |
+| `/om-capture-1on1` | Capture a 1:1 meeting transcript into a structured vault note |
+| `/om-incident-capture` | Capture an incident from Slack/channels into structured notes |
+| `/om-slack-scan` | Deep scan Slack channels/DMs for evidence |
+| `/om-peer-scan` | Deep scan a peer's GitHub PRs for review prep |
+| `/om-review-brief` | Generate a review brief (manager or peer version) |
+| `/om-self-review` | Write your self-assessment for review season — projects, competencies, principles |
+| `/om-review-peer` | Write a peer review — projects, principles, performance summary |
+| `/om-vault-audit` | Audit indexes, links, orphans, stale context |
+| `/om-vault-upgrade` | Import content from an existing vault — version detection, classification, migration |
+| `/om-prep-1on1` | Prep for an upcoming 1:1 — load person context, open items, suggested agenda |
+| `/om-meeting` | Prep for any meeting by topic — subject-forward briefing with open items and considerations |
+| `/om-intake` | Process meeting notes inbox — classify and route to the right vault notes |
+| `/om-project-archive` | Move a completed project from active/ to archive/, update indexes |
 
 ---
 
@@ -186,15 +249,15 @@ Specialized agents that run in isolated context windows. They handle heavy opera
 
 | Agent | Purpose | Invoked by |
 |-------|---------|------------|
-| `brag-spotter` | Finds uncaptured wins and competency gaps | `/wrap-up`, `/weekly` |
+| `brag-spotter` | Finds uncaptured wins and competency gaps | `/om-wrap-up`, `/om-weekly` |
 | `context-loader` | Loads all vault context about a person, project, or concept | Direct |
-| `cross-linker` | Finds missing wikilinks, orphans, broken backlinks | `/vault-audit` |
-| `people-profiler` | Bulk creates/updates person notes from Slack profiles | `/incident-capture` |
-| `review-prep` | Aggregates all performance evidence for a review period | `/review-brief` |
-| `slack-archaeologist` | Full Slack reconstruction — every message, thread, profile | `/incident-capture` |
-| `vault-librarian` | Deep vault maintenance — orphans, broken links, stale notes | `/vault-audit` |
-| `review-fact-checker` | Verify every claim in a review draft against vault sources | `/self-review`, `/review-peer` |
-| `vault-migrator` | Classify, transform, and migrate content from a source vault | `/vault-upgrade` |
+| `cross-linker` | Finds missing wikilinks, orphans, broken backlinks | `/om-vault-audit` |
+| `people-profiler` | Bulk creates/updates person notes from Slack profiles | `/om-incident-capture` |
+| `review-prep` | Aggregates all performance evidence for a review period | `/om-review-brief` |
+| `slack-archaeologist` | Full Slack reconstruction — every message, thread, profile | `/om-incident-capture` |
+| `vault-librarian` | Deep vault maintenance — orphans, broken links, stale notes | `/om-vault-audit` |
+| `review-fact-checker` | Verify every claim in a review draft against vault sources | `/om-self-review`, `/om-review-peer` |
+| `vault-migrator` | Classify, transform, and migrate content from a source vault | `/om-vault-upgrade` |
 
 > [!NOTE]
 > Subagents are defined in `.claude/agents/`. You can add your own for domain-specific workflows.
@@ -209,8 +272,8 @@ The vault doubles as a performance tracking system:
 2. **Work notes** link to competencies in their `## Related` section, annotated with what was demonstrated
 3. **Backlinks accumulate automatically** — review prep becomes reading the backlinks panel on each competency note
 4. **Brag Doc** aggregates wins per quarter with links to evidence notes
-5. **`/peer-scan`** deep-scans a colleague's GitHub PRs and writes structured evidence to `perf/evidence/`
-6. **`/review-brief`** generates a full review brief by aggregating everything: brag entries, decisions, incidents, competency evidence, and 1:1 feedback
+5. **`/om-peer-scan`** deep-scans a colleague's GitHub PRs and writes structured evidence to `perf/evidence/`
+6. **`/om-review-brief`** generates a full review brief by aggregating everything: brag entries, decisions, incidents, competency evidence, and 1:1 feedback
 
 > [!TIP]
 > To get started: create competency notes from the template, then link your work notes to them as you go. The graph does the rest.
@@ -239,7 +302,9 @@ The `bases/` folder contains database views that query your notes' frontmatter p
 
 ```
 Home.md                 Vault entry point — embedded Base views, quick links
-CLAUDE.md               Operating manual — Claude reads this every session
+CLAUDE.md               Operating manual — read by your agent every session
+AGENTS.md               Multi-agent guide — Codex, Cursor, Windsurf, etc.
+GEMINI.md               Multi-agent guide — Gemini CLI
 vault-manifest.json     Template metadata — version, structure, schemas
 CHANGELOG.md            Version history
 CONTRIBUTING.md         Template development checklist
@@ -280,9 +345,9 @@ thinking/               Scratchpad for drafts — promote findings, then delete
 templates/              Obsidian templates with YAML frontmatter
 
 .claude/
-  commands/             15 slash commands
+  commands/             18 slash commands
   agents/               9 subagents
-  scripts/              Hook scripts + charcount.sh utility
+  scripts/              Hook scripts + charcount.ts utility
   skills/               Obsidian + QMD skills
   settings.json         5 hooks configuration
 ```
@@ -304,7 +369,7 @@ Templates with YAML frontmatter, each including a `description` field for progre
 
 ## 🔧 What's Included
 
-### Obsidian Skills
+### 🧩 Obsidian Skills
 
 [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) pre-installed in `.claude/skills/`:
 
@@ -314,9 +379,9 @@ Templates with YAML frontmatter, each including a `description` field for progre
 - **json-canvas** — Visual `.canvas` file creation
 - **defuddle** — Web page to markdown extraction
 
-### QMD Skill
+### 🔍 QMD Skill
 
-A custom skill in `.claude/skills/qmd/` that teaches Claude to use [QMD](https://github.com/tobi/qmd) semantic search proactively — before reading files, before creating notes (to check for duplicates), and after creating notes (to find related content that should link to it).
+A custom skill in `.claude/skills/qmd/` that teaches the agent to use [QMD](https://github.com/tobi/qmd) semantic search proactively — before reading files, before creating notes (to check for duplicates), and after creating notes (to find related content that should link to it).
 
 ---
 
@@ -334,27 +399,62 @@ This is a starting point. Adapt it to how you work:
 | Your domain | Add folders, subagents in `.claude/agents/`, or classification rules in `.claude/scripts/` |
 
 > [!IMPORTANT]
-> `CLAUDE.md` is the operating manual. When you change conventions, update it — Claude reads it every session.
+> `CLAUDE.md` is the operating manual. When you change conventions, update it — your agent reads it every session.
 
 ---
 
 ## 🔄 Upgrading
 
-Already using an older version of obsidian-mind (or any Obsidian vault)? The `/vault-upgrade` command migrates your content into the latest template:
+### Ask your agent
+
+The easiest way — just tell your agent:
+
+```
+Update this vault to the latest obsidian-mind from https://github.com/breferrari/obsidian-mind
+```
+
+The agent will pull the latest changes, resolve conflicts, and update infrastructure files. Works with Claude Code, Codex CLI, or Gemini CLI.
+
+### Updating an existing clone
+
+If you cloned the repo directly:
+
+```bash
+cd your-vault
+git pull origin main
+```
+
+New files (`AGENTS.md`, `GEMINI.md`, `.codex/`, `.gemini/`) appear automatically and hook scripts are updated in place.
+
+### Updating a fork
+
+If you forked the repo:
+
+```bash
+git remote add upstream https://github.com/breferrari/obsidian-mind.git
+git fetch upstream
+git merge upstream/main
+```
+
+Resolve any conflicts in files you customized (typically `CLAUDE.md`, `brain/` notes). Infrastructure files (`.claude/scripts/`, `.codex/`, `.gemini/`) should merge cleanly.
+
+### Migrating from an older vault
+
+Using an older version of obsidian-mind (or any Obsidian vault)? The `/om-vault-upgrade` command migrates your content into the latest template:
 
 ```bash
 # 1. Clone the latest obsidian-mind
 git clone https://github.com/breferrari/obsidian-mind.git ~/new-vault
 
-# 2. Open it in Claude Code
-cd ~/new-vault && claude
+# 2. Open it in your agent
+cd ~/new-vault && claude   # or codex, or gemini
 
 # 3. Run the upgrade pointing to your old vault
-/vault-upgrade ~/my-old-vault
+/om-vault-upgrade ~/my-old-vault
 ```
 
-Claude will:
-1. **Detect** your vault version (v1–v3.2, or identify it as a non-obsidian-mind vault)
+The agent will:
+1. **Detect** your vault version (v1–v3.x, or identify it as a non-obsidian-mind vault)
 2. **Inventory** every file — classify as user content, scaffold, infrastructure, or uncategorized
 3. **Present a migration plan** — you see exactly what will be copied, transformed, and skipped
 4. **Execute** after your approval — transforms frontmatter, fixes wikilinks, rebuilds indexes
@@ -363,7 +463,13 @@ Claude will:
 Your old vault is **never modified**. Use `--dry-run` to preview the plan without executing.
 
 > [!NOTE]
-> Works with any Obsidian vault, not just obsidian-mind. For non-obsidian-mind vaults, Claude reads each note and classifies it semantically — routing work notes, people, incidents, 1:1s, and decisions to the right folders.
+> Works with any Obsidian vault, not just obsidian-mind. For non-obsidian-mind vaults, the agent reads each note and classifies it semantically — routing work notes, people, incidents, 1:1s, and decisions to the right folders.
+
+---
+
+## 🗺️ Roadmap
+
+**Contributions welcome.** Open an issue first for anything bigger than a one-file change. Especially anything that touches the hooks, the install, or what people need installed. Saves you from building something that can't be merged.
 
 ---
 

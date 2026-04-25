@@ -1,6 +1,6 @@
 ---
 name: cross-linker
-description: "Scan recent or specified notes for missing wikilinks. Finds mentions of people, projects, teams, competencies, and incidents that should be linked but aren't. Suggests and optionally adds bidirectional links."
+description: "Scan recent or specified notes for missing wikilinks. Finds mentions of people, projects, teams, competencies, and incidents that should be linked but aren't. Suggests missing bidirectional links for user approval."
 tools: Read, Edit, Grep, Glob, Bash
 model: sonnet
 maxTurns: 25

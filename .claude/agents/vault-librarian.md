@@ -1,7 +1,7 @@
 ---
 name: vault-librarian
-description: "Run vault maintenance: detect orphan notes, find broken wikilinks, validate frontmatter completeness, flag stale active notes, check cross-linking integrity. Invoke via /vault-audit or when the user asks for vault cleanup."
-tools: Read, Grep, Glob, Bash
+description: "Run vault maintenance: detect orphan notes, find broken wikilinks, validate frontmatter completeness, flag stale active notes, check cross-linking integrity. Invoke via /om-vault-audit or when the user asks for vault cleanup."
+tools: Read, Write, Grep, Glob, Bash
 model: sonnet
 maxTurns: 25
 skills:
