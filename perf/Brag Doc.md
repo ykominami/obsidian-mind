@@ -1,4 +1,5 @@
 ---
+date: 2026-05-04
 description: "Index of quarterly brag notes — impact, competency evidence, technical growth, feedback per quarter"
 tags:
   - perf
@@ -13,7 +14,7 @@ A running log of impact, wins, and growth. Each quarter is its own note — open
 
 | Quarter | Highlights | Review |
 |---------|-----------|--------|
-|         |           |        |
+| [[perf/brag/Q2 2026\|Q2 2026]] | TECS知識ベース構築・vault再構築・Cursor活用プレイブック | — |
 
 ## How This Works
 
