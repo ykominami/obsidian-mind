@@ -35,6 +35,17 @@ if (typeof filePath !== "string" || !filePath) {
 	process.exit(0);
 }
 
+// Skip files outside the vault (e.g. external wiki hubs, temp dirs)
+const projectDir = process.env.CLAUDE_PROJECT_DIR;
+if (projectDir) {
+	const normProject = projectDir.replaceAll("\\", "/").replace(/\/$/, "");
+	const normFile = filePath.replaceAll("\\", "/");
+	if (!normFile.toLowerCase().startsWith(normProject.toLowerCase() + "/")) {
+		debug(`validate: outside vault — skipped ${filePath}`);
+		process.exit(0);
+	}
+}
+
 if (shouldSkipFile(filePath)) {
 	debug(`validate: skipped ${filePath}`);
 	process.exit(0);
