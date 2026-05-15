@@ -1,5 +1,5 @@
 ---
-date:
+date: 2026-05-10
 description: "Living document of goals, focus areas, and aspirations — read at session start, updated when direction shifts"
 tags:
   - brain
@@ -11,67 +11,91 @@ aliases:
 
 # North Star
 
-A living document of goals, aspirations, and current focus areas. Both you and Claude write to this. Claude reads it at the start of meaningful work sessions and references it when making suggestions.
+目標とフォーカスの生きたドキュメント。自分と Claude の両方が書く。セッション開始時に Claude が読む。
 
 ## Current Focus
 
-# TOPPERSプロジェクトのTECS開発(TECS WG関連)
-## tecsgen
+### TOPPERSプロジェクトのTECS開発(TECS WG関連)
+#### tecsgen
 - 外部仕様作成
 - 内部仕様作成
 - リファクタリング
 - 新機能追加
 - テスト仕様・テストプログラム作成
 - ユーザ向けドキュメント作成
-## TECSCDE
+#### TECSCDE
 - 外部仕様・内部仕様
 - JavaScript版（フレームワーク非依存）外部仕様
 - JavaScript版（フレームワーク依存）外部仕様・内部仕様・実装・テスト仕様・テストプログラム
-## 各種関連ツール
+#### 各種関連ツール
 - tecsmerge
 - RubyScriptAnalyzer
 - TECS向けLSPサーバ
-## ドキュメント作成
-### TECS仕様書
-### ツール仕様書
-## mkspec(テスト管理)
-# 個人開発環境整備
-## NotebookML管理システム
-### NotebookMLソース管理システム
-## 関連ドキュメント管理システム
-### ドキュメント管理システム([[bookinfor]]-書籍・Kindle・ドキュメント・APIキー管理-Railsアプリ)
-### bookmark管理システム([[bookmarkr]] - Google Chromeのブックマーク、OneTab機能拡張)
-### bookmark管理拡張機能([[bmx]] - Google Chrome用機能拡張)
-### Calibre用documentメタデータ抽出システム([[calibrex]] - calibre DBから)
-### Gist管理システム([[gistx]])
-### Githubリポジトリ管理システム([[ghrepo]])
-### gitリポジトリ管理システム([[gitreporemote]])
-### ICONファイル管理システム([[cpiconfiles]])
-### ファイル管理システム([[filelist]])
-### Google Drive用ファイルアップロードプログラム(gupload)
-## HTMLドキュメント解析システム(htmlparser)
-### Amazon注文履歴モジュール(amazonorderscraper)
-### Amazonカートモジュール(amazonsavedcartscraper)
-### Fanza同人バスケットモジュール(fanzadoujinbasketscraper)
-### Fanza同人購入履歴モジュール(fanzadoujinpurchasedscraper)
-### Amazon-Kindle Unlimitedリストモジュール(kuscraper)
-### Udemyマイラーニングモジュール(udemyscraper)
+#### ドキュメント作成
+##### TECS仕様書
+- コンポーネントモデルリファレンスマニュアル（開発中・未公開）
+- ジェネレータコード出力リファレンスマニュアル（開発中・未公開）
+- CDL 未記載事項（CDLref_undoc.html — 内容なし）
+##### ツール仕様書
+##### プラグインドキュメント（tecsgen — 16/17種が未記載）
+###### カーネル対応
+- ATK1Plugin
+- HRP2Plugin
+- ASP3 NotifierPlugin
+###### mrubyブリッジ
+- MrubyBridgePlugin
+- Mruby2CBridgePlugin
+###### トレース
+- TracePlugin
+- TLVTracePlugin
+###### RPC
+- TransparentRPCPlugin
+- OpaqueRPCPlugin
+- SharedRPCPlugin
+- SharedOpaqueRPCPlugin
+###### Cインタフェース
+- C2TECSPlugin
+- TECS2CPlugin
+##### 拡張コンポーネント
+- TINET+TECS（開発中・未リリース — ドキュメント詳細なし）
+- TLSF+TECS（詳細セクション未記載 — "to be filled in"）
+#### mkspec(テスト管理)
 
-## LLM対話システム
-### janllm
-## Util関連
-### TOMLファイル操作(tomlx)
-### TkinterベースTUIプログラム(tkinterx_)
-### (xmlkindle)
-## Python共通ライブラリ
-### Pythonライブラリ(yklibpy)
-### Pythonライブラリ(yklibpyz)
+### 個人開発環境整備
+#### NotebookML管理システム
+- NotebookMLソース管理システム([[notebookmlx]])
+#### 関連ドキュメント管理システム
+- ドキュメント管理システム([[bookinfor]] — 書籍・Kindle・ドキュメント・APIキー管理 Railsアプリ)
+- bookmark管理システム([[bookmarkr]] — Google Chromeのブックマーク・OneTab機能拡張)
+- bookmark管理拡張機能([[bmx]] — Google Chrome用機能拡張)
+- Calibre用documentメタデータ抽出システム([[calibrex]] — calibre DBから)
+- Gist管理システム([[gistx]])
+- Githubリポジトリ管理システム([[ghrepo]])
+- gitリポジトリ管理システム([[gitreporemote]])
+- ICONファイル管理システム([[cpiconfiles]])
+- ファイル管理システム([[filelist]])
+- Google Drive用ファイルアップロードプログラム(gupload)
+#### HTMLドキュメント解析システム(htmlparser)
+- Amazon注文履歴モジュール(amazonorderscraper)
+- Amazonカートモジュール(amazonsavedcartscraper)
+- Fanza同人バスケットモジュール(fanzadoujinbasketscraper)
+- Fanza同人購入履歴モジュール(fanzadoujinpurchasedscraper)
+- Amazon-Kindle Unlimitedリストモジュール(kuscraper)
+- Udemyマイラーニングモジュール(udemyscraper)
+#### LLM対話システム
+- janllm
+#### Util関連
+- TOMLファイル操作(tomlx)
+- TkinterベースTUIプログラム(tkinterx_)
+- (xmlkindle)
+#### Python共通ライブラリ
+- Pythonライブラリ(yklibpy)
+- Pythonライブラリ(yklibpyz)
+#### Ruby共通ライブラリ
+- Rubyライブラリ(ykutils)
+- Rubyライブラリ(ykxutils)
 
-## Ruby共通ライブラリ
-### Rubyライブラリ(ykutils)
-### Rubyライブラリ(ykxutils)
-
-#\# Goals
+## Goals
 
 ### Short-term (This Quarter)
 
@@ -87,19 +111,13 @@ A living document of goals, aspirations, and current focus areas. Both you and C
 
 ## Aspirations
 
-_What kind of engineer/person am I becoming?_
-
 -
 
 ## Anti-goals
 
-_What am I explicitly NOT optimizing for?_
-
 -
 
 ## Shifts Log
-
-Record when focus changes, with date and reason.
 
 | Date | Shift              | Reason        |
 | ---- | ------------------ | ------------- |

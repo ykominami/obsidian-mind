@@ -3,6 +3,15 @@
     "qmd": {
       "command": "node",
       "args": [".claude/scripts/qmd-mcp.mjs"]
+    },
+    "slack": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "xoxb-YOUR-TOKEN-HERE",
+        "SLACK_TEAM_ID": "T-YOUR-TEAM-ID-HERE",
+        "SLACK_CHANNEL_IDS": ""
+      }
     }
   }
 }

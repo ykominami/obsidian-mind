@@ -8,13 +8,11 @@ tags:
 
 # Work Notes
 
-Central map of content. All work notes and decisions link back here. For quick navigation, use [[Home]] or open `bases/Work Dashboard.base`.
+全作業ノートのインデックス。[[Home]] または `bases/Work Dashboard.base` でナビゲーション。
 
-**Folder structure**: `active/` = current projects, `archive/` = completed (by year), `incidents/` = incident docs, `1-1/` = meetings.
+`active/` = 進行中 / `archive/YYYY/` = 完了済 / `incidents/` = インシデント / `1-1/` = ミーティング
 
 ## Incidents
-
-Incident docs live in `work/incidents/`. See `Incidents.base` for overview.
 
 -
 
@@ -34,7 +32,6 @@ Incident docs live in `work/incidents/`. See `Incidents.base` for overview.
 - [[gistx]] — Gist 管理システム Python パッケージ
 - [[gitreporemote]] — git リポジトリ管理システム Python パッケージ
 - [[notebookmlx]] — NotebookML ソース管理システム
-- [[icon-file-group-manager-要件定義書]] — アイコンファイルグループ管理システム要件定義書
 
 ## Review Prep
 
@@ -47,7 +44,7 @@ Incident docs live in `work/incidents/`. See `Incidents.base` for overview.
 ## Completed
 
 ### Current Quarter
--
+- [[work/archive/2026/icon-file-group-manager-要件定義書|icon-file-group-manager 要件定義書]] — 要件定義フェーズ完了（2026-04-26）
 
 ### Previous Quarters
 -
@@ -60,7 +57,6 @@ Incident docs live in `work/incidents/`. See `Incidents.base` for overview.
 
 | Date | Decision | Status | Link |
 |------|----------|--------|------|
-|      |          |        |      |
 
 ## Open Questions
 

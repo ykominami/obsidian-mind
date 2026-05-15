@@ -22,26 +22,26 @@ This vault has [obsidian-skills](https://github.com/kepano/obsidian-skills) inst
 
 Defined in `.claude/commands/`. See [[Skills]] for full documentation.
 
-| Command | Purpose |
-|---------|---------|
-| `/om-standup` | Morning kickoff -- load context, review yesterday, surface tasks, priorities |
-| `/om-dump` | Freeform capture -- dump anything, gets routed to the right notes |
-| `/om-wrap-up` | Full session review -- verify notes, indexes, links, suggest improvements |
-| `/om-humanize` | Voice-calibrated editing -- make notes sound like you, not AI |
-| `/om-weekly` | Weekly synthesis -- cross-session patterns, North Star alignment, uncaptured wins |
-| `/om-capture-1on1` | Capture 1:1 meeting transcript into structured vault note |
-| `/om-incident-capture` | Capture incident from Slack channels/DMs into structured vault notes |
-| `/om-slack-scan` | Deep scan Slack channels/DMs for evidence |
-| `/om-peer-scan` | Deep scan a peer's GitHub PRs for review prep |
-| `/om-review-brief` | Generate review brief (manager or peer version) |
-| `/om-self-review` | Write self-assessment for review tool -- projects, competencies, principles |
-| `/om-review-peer` | Write peer review -- projects, principles, performance summary |
-| `/om-vault-audit` | Audit indexes, links, orphans, stale context |
-| `/om-vault-upgrade` | Import content from an existing vault into this obsidian-mind instance |
-| `/om-prep-1on1` | Prep for an upcoming 1:1 -- load person context, open items, suggested agenda |
-| `/om-meeting` | Prep for any meeting by topic -- subject-forward briefing with open items and considerations |
-| `/om-intake` | Process meeting notes inbox -- classify and route to the right vault notes |
-| `/om-project-archive` | Move completed project from active/ to archive/, update indexes |
+| Command                | Purpose                                                                                      |
+| ---------------------- | -------------------------------------------------------------------------------------------- |
+| `/om-standup`          | Morning kickoff -- load context, review yesterday, surface tasks, priorities                 |
+| `/om-dump`             | Freeform capture -- dump anything, gets routed to the right notes                            |
+| `/om-wrap-up`          | Full session review -- verify notes, indexes, links, suggest improvements                    |
+| `/om-humanize`         | Voice-calibrated editing -- make notes sound like you, not AI                                |
+| `/om-weekly`           | Weekly synthesis -- cross-session patterns, North Star alignment, uncaptured wins            |
+| `/om-capture-1on1`     | Capture 1:1 meeting transcript into structured vault note                                    |
+| `/om-incident-capture` | Capture incident from Slack channels/DMs into structured vault notes                         |
+| `/om-slack-scan`       | Deep scan Slack channels/DMs for evidence                                                    |
+| `/om-peer-scan`        | Deep scan a peer's GitHub PRs for review prep                                                |
+| `/om-review-brief`     | Generate review brief (manager or peer version)                                              |
+| `/om-self-review`      | Write self-assessment for review tool -- projects, competencies, principles                  |
+| `/om-review-peer`      | Write peer review -- projects, principles, performance summary                               |
+| `/om-vault-audit`      | Audit indexes, links, orphans, stale context                                                 |
+| `/om-vault-upgrade`    | Import content from an existing vault into this obsidian-mind instance                       |
+| `/om-prep-1on1`        | Prep for an upcoming 1:1 -- load person context, open items, suggested agenda                |
+| `/om-meeting`          | Prep for any meeting by topic -- subject-forward briefing with open items and considerations |
+| `/om-intake`           | Process meeting notes inbox -- classify and route to the right vault notes                   |
+| `/om-project-archive`  | Move completed project from active/ to archive/, update indexes                              |
 
 ## Vault Structure
 
