@@ -2,7 +2,7 @@
 date: 2026-04-26
 description: "アイコンファイル管理システム（icon-file-group-manager）の要件定義書 — グループ管理・スナップショット履歴・条件コピー機能"
 project: icon-file-group-manager
-status: active
+status: completed
 tags:
   - work-note
 ---
