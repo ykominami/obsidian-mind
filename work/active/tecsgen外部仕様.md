@@ -422,4 +422,6 @@ make
 
 - [[TECS開発]] — 開発進捗全体
 - [[North Star]]
-- [[03-Resources/my-topic/CLAUDE|TECS Wiki]] — llm-wiki 知識ベース（tecsgen-commands, cdl-language, implementation-patterns 等）
+- [[reference/03-Resources/my-topic/CLAUDE|TECS Wiki]] — llm-wiki 知識ベース（tecsgen-commands, cdl-language, implementation-patterns 等）
+- [[perf/competencies/技術文書化|技術文書化]] — 仕様書作成の competency 証拠
+- [[perf/competencies/ソフトウェアアーキテクチャ|ソフトウェアアーキテクチャ]] — CDL・tecsgen 設計判断の competency 証拠

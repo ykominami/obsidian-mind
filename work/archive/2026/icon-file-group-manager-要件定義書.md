@@ -144,3 +144,5 @@ tags:
 
 - [[cpiconfiles]] — ICONファイル管理システム本体
 - [[work/Index|Work Index]]
+- [[perf/brag/Q2 2026|Q2 2026]] — 要件定義完了の記録
+- [[perf/competencies/ソフトウェアアーキテクチャ|ソフトウェアアーキテクチャ]] — Kiro仕様駆動開発の competency 証拠

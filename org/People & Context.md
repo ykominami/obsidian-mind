@@ -1,4 +1,5 @@
 ---
+date: 2026-04-26
 description: "Org context, teams, stakeholders, review history, and dynamics"
 tags:
   - org
