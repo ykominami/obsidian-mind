@@ -20,3 +20,8 @@ thinking/session-logs/
 # Node typecheck deps (CI + local dev only; runtime is zero-deps)
 node_modules/
 .claude/scripts/node_modules/
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key
