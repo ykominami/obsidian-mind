@@ -20,6 +20,8 @@ tags:
 
 ### TECS（主要）
 - [[TECS開発]] — tecsgen・TECSCDE・ツール群・仕様書・mkspec（Q2-2026）
+- [[tecsgen外部仕様]] — tecsgen 外部仕様書（ドラフト、2026-05-19）
+- [[tecsgen内部仕様]] — tecsgen 内部仕様書（ドラフト着手、2026-05-19）
 
 ### 個人開発環境整備ツール群
 - [[bmx]] — bookmark管理用 Google Chrome 機能拡張

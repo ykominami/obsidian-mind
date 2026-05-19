@@ -19,6 +19,7 @@ Persistent context and knowledge retained across sessions. Each topic lives in i
 
 ## Recent Context
 
+- 2026-05-20: wrap-up — tecsgen外部仕様（17KB）・内部仕様（25KB）の未コミット成果物をコミット・プッシュ。brag docに仕様書2件エントリ追加。TECSブロッカー「ドキュメント生成方法未決定」は**解決済み**（llm-wiki + Claude Code直読に決定、2026-05-19）。未解消: 多数の未追跡ファイル（日次ノート・root散在ノート）、Collaboration/Deliveryコンピテンシーノート未作成。
 - 2026-05-19: wrap-up — brag docに3エントリ追加（North Star見出し修正・Memories継続ログ運用確立・icon-file-group-managerアーカイブ完了）。未解消: 77件の未追跡ファイル（日次ノート20件・root散在ノート多数）、「ドキュメント生成方法未決定」TECSブロッカー、Collaboration/Deliveryコンピテンシーノート未作成。claudian plugin main.js未コミット（要確認）。
 - 2026-05-15: wrap-up — North Star見出し階層バグを修正（`#`・`##` が `## Current Focus` 内に混在 → `###`/`####` に統一）。brag-spotter結果: Gotchas.md運用開始・TECS知識ベース動作検証・個人開発11件可視化の3件が未記載。Collaboration/Deliveryコンピテンシーノート未作成。未解消: 34件の未追跡ファイル（日次ノート11件・Kindle 7件・rootノート等）、「ドキュメント生成方法未決定」TECSブロッカー（3週間以上）
 - 2026-05-14: wrap-up — brag docにコンピテンシーフレームワーク設計エントリ追加。未解消問題: 34件の未追跡ファイル積み残し（日次ノート11件がvault root・Kindle 7件・画像3件・Claude Codeノート等がroot）、「ドキュメント生成方法未決定」TECSブロッカー3週間未解消、North Star heading階層崩れ（# が ## の中に混在）
