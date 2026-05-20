@@ -293,3 +293,7 @@ Compiled 88 raw sources. Created 88 source-summary pages + 45 concept pages. Upd
 ## [2026-05-20] query | celltype-cell-difference
 Answered "セルタイプとセルの違いは何ですか". Referenced 6 pages. Filed to [[2026-05-20-celltype-cell-difference]].
 
+## [2026-05-20] promote | celltype-cell-difference
+Promoted query output to concept page [[tecs-celltype-cell-difference]].
+
+

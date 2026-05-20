@@ -20,6 +20,7 @@ tags: [tecs, toppers, index]
 - [[tecs-namespace]] — ネームスペース (2026-04-24)
 - [[tecs-region]] — リージョン (2026-04-24)
 - [[tecs-tcd]] — コンポーネント図 (2026-04-24)
+- [[tecs-celltype-cell-difference]] — セルタイプとセルの違い (2026-05-20)
 
 ## TECSツール
 
