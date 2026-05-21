@@ -1,4 +1,13 @@
 {
+  "commands": {
+    "directory": ".claude/commands"
+  },
+  "slash_commands": {
+    "directory": ".claude/commands"
+  },
+  "agents": {
+    "directory": ".claude/agents"
+  },
   "hooks": {
     "SessionStart": [
       {

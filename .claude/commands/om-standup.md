@@ -1,4 +1,5 @@
 ---
+name: om-standup
 description: "Morning kickoff. Load today's context, review yesterday, surface open tasks, and identify priorities."
 ---
 

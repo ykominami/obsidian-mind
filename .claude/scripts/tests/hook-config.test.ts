@@ -85,6 +85,21 @@ function eachNodeHookCommand(
 	return out;
 }
 
+function resolvesViaProjectDir(command: string, envVar: string): boolean {
+	const bashFallback = command.includes(`\${${envVar}:-.}/.claude/scripts/`);
+	if (bashFallback) return true;
+
+	// Codex runs hook commands under PowerShell in this workspace. Bash-style
+	// `${CODEX_PROJECT_DIR:-.}` expands incorrectly there, so the Codex config
+	// uses the PowerShell environment variable plus Join-Path instead.
+	return (
+		envVar === "CODEX_PROJECT_DIR" &&
+		command.includes(`$env:${envVar}`) &&
+		command.includes("Join-Path") &&
+		command.includes(".claude/scripts/")
+	);
+}
+
 describe("hook config — CWD-independent script resolution (issue #45)", () => {
 	for (const { label, path, envVar } of configs) {
 		describe(`${label} (${path})`, () => {
@@ -99,10 +114,10 @@ describe("hook config — CWD-independent script resolution (issue #45)", () => 
 			});
 
 			for (const { event, command } of commands) {
-				test(`${event} uses \${${envVar}:-.}/ prefix`, () => {
+				test(`${event} resolves via ${envVar}`, () => {
 					assert.ok(
-						command.includes(`\${${envVar}:-.}/.claude/scripts/`),
-						`${path} ${event} command must resolve scripts via \${${envVar}:-.}/ to survive CWD drift — got:\n  ${command}`,
+						resolvesViaProjectDir(command, envVar),
+						`${path} ${event} command must resolve scripts via ${envVar} to survive CWD drift — got:\n  ${command}`,
 					);
 				});
 
@@ -111,9 +126,7 @@ describe("hook config — CWD-independent script resolution (issue #45)", () => 
 					// CWD is the project root — which is exactly the assumption
 					// that broke in #45. Enforce the env-var-prefixed form.
 					const bareRelative = / \.claude\/scripts\//.test(command);
-					const envPrefixed = command.includes(
-						`\${${envVar}:-.}/.claude/scripts/`,
-					);
+					const envPrefixed = resolvesViaProjectDir(command, envVar);
 					assert.ok(
 						!bareRelative || envPrefixed,
 						`${path} ${event} has a bare .claude/scripts/ path — ${command}`,
