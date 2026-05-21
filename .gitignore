@@ -25,3 +25,19 @@ node_modules/
 .dolt/
 *.db
 .beads-credential-key
+
+# AI / IDE tool directories (local, not vault content)
+.agents/
+.antigravitycli/
+.cursor/
+.junie/
+.kilocode/
+.mux/
+.windsurf/
+.obsidian/plugins/realclaudian/
+.obsidian/backlink.json
+.obsidian/templates.json
+.obsidian/webviewer.json
+
+# Daily notes at vault root (created by Obsidian, not tracked)
+[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].md
