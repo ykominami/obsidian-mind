@@ -1,0 +1,3 @@
+[tools]
+gemini = "latest"
+go = "1.26.3"
