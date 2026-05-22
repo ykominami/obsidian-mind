@@ -19,6 +19,7 @@ Persistent context and knowledge retained across sessions. Each topic lives in i
 
 ## Recent Context
 
+- 2026-05-23: wrap-up — `reference/Claude Code スキルのモデル指定.md` を新規作成（work/archive のフロントマターなし raw 出力を整形）。`.claude/**/settings.local.json` を .gitignore に追加。コミット・プッシュ完了。未解消（継続）: ①Collaboration/Delivery コンピテンシーノート未作成（5セッション以上）。
 - 2026-05-22: wrap-up — vault-audit全修正・celltype概念ページ昇格の2件をQ2ブラグに追記。claudian plugin・設定ファイル同期をコミット・プッシュ完了。未解消（4セッション継続）: ①21件の削除ファイル未コミット（Clippings/・Note/・ARCHITECTURE.md 等）、②ルート直下の生出力ノート4件（要削除/移動）、③AI toolsディレクトリの.gitignore未追加、④Collaboration/Deliveryコンピテンシーノート未作成。
 - 2026-05-20: wrap-up — tecsgen外部仕様（17KB）・内部仕様（25KB）の未コミット成果物をコミット・プッシュ。brag docに仕様書2件エントリ追加。TECSブロッカー「ドキュメント生成方法未決定」は**解決済み**（llm-wiki + Claude Code直読に決定、2026-05-19）。未解消: 多数の未追跡ファイル（日次ノート・root散在ノート）、Collaboration/Deliveryコンピテンシーノート未作成。
 - 2026-05-19: wrap-up — brag docに3エントリ追加（North Star見出し修正・Memories継続ログ運用確立・icon-file-group-managerアーカイブ完了）。未解消: 77件の未追跡ファイル（日次ノート20件・root散在ノート多数）、「ドキュメント生成方法未決定」TECSブロッカー、Collaboration/Deliveryコンピテンシーノート未作成。claudian plugin main.js未コミット（要確認）。
