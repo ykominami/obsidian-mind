@@ -19,6 +19,7 @@ Persistent context and knowledge retained across sessions. Each topic lives in i
 
 ## Recent Context
 
+- 2026-05-25: wrap-up — reference/Note/ABC.md・DEF.md の削除コミット、reference/Inbox/ 10件追加コミット・プッシュ完了。新規Inbox5件出現（10分でわかるObsidian・dataview・karpathy-CLAUDE.md・ベクトルDB活用・今日のタスク）・Note/ディレクトリ未追跡継続。未解消（継続）: ①Collaboration/Deliveryコンピテンシーノート未作成（7セッション以上）、②work/1-1/・デザイン系ディレクトリ・プロジェクト/ 未追跡。
 - 2026-05-23: wrap-up — `reference/Claude Code スキルのモデル指定.md` を新規作成（work/archive のフロントマターなし raw 出力を整形）。`.claude/**/settings.local.json` を .gitignore に追加。コミット・プッシュ完了。未解消（継続）: ①Collaboration/Delivery コンピテンシーノート未作成（5セッション以上）。
 - 2026-05-22: wrap-up — vault-audit全修正・celltype概念ページ昇格の2件をQ2ブラグに追記。claudian plugin・設定ファイル同期をコミット・プッシュ完了。未解消（4セッション継続）: ①21件の削除ファイル未コミット（Clippings/・Note/・ARCHITECTURE.md 等）、②ルート直下の生出力ノート4件（要削除/移動）、③AI toolsディレクトリの.gitignore未追加、④Collaboration/Deliveryコンピテンシーノート未作成。
 - 2026-05-20: wrap-up — tecsgen外部仕様（17KB）・内部仕様（25KB）の未コミット成果物をコミット・プッシュ。brag docに仕様書2件エントリ追加。TECSブロッカー「ドキュメント生成方法未決定」は**解決済み**（llm-wiki + Claude Code直読に決定、2026-05-19）。未解消: 多数の未追跡ファイル（日次ノート・root散在ノート）、Collaboration/Deliveryコンピテンシーノート未作成。
