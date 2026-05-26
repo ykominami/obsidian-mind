@@ -33,6 +33,16 @@ Recurring patterns discovered across work.
 - `quarter` フィールドがないと Work Dashboard Base に表示されない
 - 最低限 `[[North Star]]` へのリンクを持つこと
 
+## Claude サブエージェント活用パターン
+
+- **文章チェック用サブエージェント** — コーディング時の linter 的に使う発想。レビュー・校正を並列エージェントに委譲することで品質ゲートを自動化できる（出典: [[reference/Inbox/AIAU-雑談(ai)]]）
+
+## Obsidian タグ運用原則
+
+- タグの目的を明確にし一貫したルールを定める: 種類（`work-note`, `decision`）・テーマ・状態（`active`, `completed`）の3軸
+- 階層タグ（`project/auth-refactor` など）で粒度と分類の柔軟性を両立
+- リンクだけでは捉えきれない「属性によるグルーピング」にタグを使う
+
 ## プロジェクト実装言語別分類（2026-04-11 時点）
 
 ### Ruby 実装
