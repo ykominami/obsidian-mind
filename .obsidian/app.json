@@ -9,5 +9,6 @@
     "CONTRIBUTING.md"
   ],
   "alwaysUpdateLinks": true,
-  "newFileLocation": "current"
+  "newFileLocation": "folder",
+  "newFileFolderPath": "reference/Inbox"
 }

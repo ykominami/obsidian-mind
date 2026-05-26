@@ -42,3 +42,26 @@ node_modules/
 
 # Daily notes at vault root (created by Obsidian, not tracked)
 [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].md
+
+
+
+
+# Ignore Smart Environment folder
+.smart-env
+
+# Obsidian plugin source directories (installed locally, not vault content)
+.obsidian/plugins/marp-slides/
+.obsidian/plugins/obsidian-git/
+.obsidian/plugins/obsidian-importer/
+.obsidian/plugins/obsidian-kindle-plugin/
+.obsidian/plugins/obsidian-memos/
+.obsidian/plugins/obsidian-tasks-plugin/
+.obsidian/plugins/smart-connections/
+.obsidian/plugins/templater-obsidian/
+.obsidian/types.json
+.obsidian/bookmarks.json
+
+# Design template sample directories (Obsidian plugin placeholder content, not real vault content)
+デザインアイデア/
+デザイン原則/
+プロジェクト/

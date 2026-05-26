@@ -19,6 +19,7 @@ Persistent context and knowledge retained across sessions. Each topic lives in i
 
 ## Recent Context
 
+- 2026-05-27: wrap-up — セッション内作業なし（即wrap-up）。未追跡ファイル: Clippings 2件（Karpathy LLM wiki記事・ベクトルDB不要記事）、reference/Inbox 2件（AIAU-雑談・llm-wiki に必要なもの）、デザイン系3ディレクトリ（テンプレートサンプル、.gitignore推奨）。brag-spotter: semantic search CLIリファレンス・YouTube Bases 3本・LLM wikiメモリ研究の3件未記録→Q2 brag追記。未解消（継続10セッション以上）: ①Collaboration/Deliveryコンピテンシーノート未作成、②work/1-1/空、③デザイン系ディレクトリ・プロジェクト/ 未追跡。
 - 2026-05-26: wrap-up — Inbox4件処理（Claudeの7つの組み込み機能→reference/Note/・TECSコンポーネント仕様書目次案→reference/Note/・KarpathyのCLAUDE.md拡張ルールを既存ノートに統合・無題のファイル→Clippings/重複のため削除）。templates/Untitled.md削除（Daily Note Template重複）。未解消（継続9セッション以上）: ①Collaboration/Deliveryコンピテンシーノート未作成、②Note/ディレクトリ未追跡（Kindle/SHIFT-AI/VCS/YouTube）、③work/1-1/空、④デザイン系ディレクトリ・プロジェクト/ 未追跡。
 - 2026-05-25: wrap-up — reference/Note/ABC.md・DEF.md の削除コミット、reference/Inbox/ 10件追加コミット・プッシュ完了。新規Inbox5件出現（10分でわかるObsidian・dataview・karpathy-CLAUDE.md・ベクトルDB活用・今日のタスク）・Note/ディレクトリ未追跡継続。未解消（継続）: ①Collaboration/Deliveryコンピテンシーノート未作成（7セッション以上）、②work/1-1/・デザイン系ディレクトリ・プロジェクト/ 未追跡。
 - 2026-05-23: wrap-up — `reference/Claude Code スキルのモデル指定.md` を新規作成（work/archive のフロントマターなし raw 出力を整形）。`.claude/**/settings.local.json` を .gitignore に追加。コミット・プッシュ完了。未解消（継続）: ①Collaboration/Delivery コンピテンシーノート未作成（5セッション以上）。
