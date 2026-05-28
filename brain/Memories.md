@@ -19,6 +19,7 @@ Persistent context and knowledge retained across sessions. Each topic lives in i
 
 ## Recent Context
 
+- 2026-05-29: wrap-up — 2026-05-28/29セッション。TECS wiki RST 9件ingest完了（ソース57件に拡張）。Inbox 1件処理（NotebookLM活用術→reference/Note/昇格）。templates/from-NotebookLM.md を正規テンプレートとして追跡開始。.gitignore に 2hop-links-plus 追加。brag追記3件（Inbox15件処理・TECS wiki 9件ingest・Patterns.md 2パターン）。未解消（継続）: ①Collaboration/Deliveryコンピテンシーノート未作成（10+セッション）、②TECS wiki コンパイル未実施（9件以上未コンパイルソース）
 - 2026-05-27: wrap-up — セッション内作業なし（即wrap-up）。未追跡ファイル: Clippings 2件（Karpathy LLM wiki記事・ベクトルDB不要記事）、reference/Inbox 2件（AIAU-雑談・llm-wiki に必要なもの）、デザイン系3ディレクトリ（テンプレートサンプル、.gitignore推奨）。brag-spotter: semantic search CLIリファレンス・YouTube Bases 3本・LLM wikiメモリ研究の3件未記録→Q2 brag追記。未解消（継続10セッション以上）: ①Collaboration/Deliveryコンピテンシーノート未作成、②work/1-1/空、③デザイン系ディレクトリ・プロジェクト/ 未追跡。
 - 2026-05-26: wrap-up — Inbox4件処理（Claudeの7つの組み込み機能→reference/Note/・TECSコンポーネント仕様書目次案→reference/Note/・KarpathyのCLAUDE.md拡張ルールを既存ノートに統合・無題のファイル→Clippings/重複のため削除）。templates/Untitled.md削除（Daily Note Template重複）。未解消（継続9セッション以上）: ①Collaboration/Deliveryコンピテンシーノート未作成、②Note/ディレクトリ未追跡（Kindle/SHIFT-AI/VCS/YouTube）、③work/1-1/空、④デザイン系ディレクトリ・プロジェクト/ 未追跡。
 - 2026-05-25: wrap-up — reference/Note/ABC.md・DEF.md の削除コミット、reference/Inbox/ 10件追加コミット・プッシュ完了。新規Inbox5件出現（10分でわかるObsidian・dataview・karpathy-CLAUDE.md・ベクトルDB活用・今日のタスク）・Note/ディレクトリ未追跡継続。未解消（継続）: ①Collaboration/Deliveryコンピテンシーノート未作成（7セッション以上）、②work/1-1/・デザイン系ディレクトリ・プロジェクト/ 未追跡。

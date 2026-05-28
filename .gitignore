@@ -58,6 +58,7 @@ node_modules/
 .obsidian/plugins/obsidian-tasks-plugin/
 .obsidian/plugins/smart-connections/
 .obsidian/plugins/templater-obsidian/
+.obsidian/plugins/2hop-links-plus/
 .obsidian/types.json
 .obsidian/bookmarks.json
 
