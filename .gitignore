@@ -56,6 +56,7 @@ node_modules/
 .obsidian/plugins/obsidian-kindle-plugin/
 .obsidian/plugins/obsidian-memos/
 .obsidian/plugins/obsidian-tasks-plugin/
+.obsidian/plugins/obsidian-mindmap-nextgen/
 .obsidian/plugins/smart-connections/
 .obsidian/plugins/templater-obsidian/
 .obsidian/plugins/2hop-links-plus/

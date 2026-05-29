@@ -10,7 +10,7 @@ source: reference/Inbox/ObsidianユーザーのためのNotebookLM活用術.md
 ---
 
 # NotebookLM + Obsidian 活用ワークフロー
-
+「ObsidianユーザーのためのNotebookLM活用術」
 ## NotebookLMの基本機能
 
 1. **要約** — 資料を読み込ませると自動要約
