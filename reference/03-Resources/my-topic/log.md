@@ -297,3 +297,7 @@ Answered "セルタイプとセルの違いは何ですか". Referenced 6 pages.
 Promoted query output to concept page [[tecs-celltype-cell-difference]].
 
 
+
+
+## [2026-05-31] compile | 6 sources → 6 pages
+Compiled 6 raw sources. Created 6 source-summary pages + 0 concept pages. Updated 45 concept pages. Backlink fixes: 43.
