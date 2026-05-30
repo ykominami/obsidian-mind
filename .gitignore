@@ -62,6 +62,7 @@ node_modules/
 .obsidian/plugins/2hop-links-plus/
 .obsidian/types.json
 .obsidian/bookmarks.json
+.obsidian/daily-notes.json
 
 # Design template sample directories (Obsidian plugin placeholder content, not real vault content)
 デザインアイデア/
