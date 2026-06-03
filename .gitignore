@@ -51,6 +51,7 @@ node_modules/
 .smart-env
 
 # Obsidian plugin source directories (installed locally, not vault content)
+.obsidian/plugins/copilot/
 .obsidian/plugins/marp-slides/
 .obsidian/plugins/obsidian-git/
 .obsidian/plugins/obsidian-importer/

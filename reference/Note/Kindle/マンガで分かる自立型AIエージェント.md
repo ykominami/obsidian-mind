@@ -39,4 +39,4 @@ icacls "C:\ImpotysntData" /deny "AI_User_Account":(OI)(CI)(F)
 
 ![[Pasted image 20260504183012.png]]
 
-![[Pasted image 20260504183052.png]]
+![[スクショ-付録：OpenwClaw導入・運用チェックリスト.png]]

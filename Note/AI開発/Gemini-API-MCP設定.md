@@ -34,4 +34,4 @@ npx skills add google-gemini/gemini-skills --skill gemini-interactions-api --glo
 ## 関連
 
 - [[brain/Patterns]] — Claude Code 活用パターン
-- [[reference/Note/Claude活用-Cherny5段階フレームワーク]]
+- [[Claude活用-Cherny5段階フレームワーク]]
