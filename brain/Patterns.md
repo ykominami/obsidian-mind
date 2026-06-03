@@ -62,6 +62,33 @@ Recurring patterns discovered across work.
 - 階層タグ（`project/auth-refactor` など）で粒度と分類の柔軟性を両立
 - リンクだけでは捉えきれない「属性によるグルーピング」にタグを使う
 
+## ghrepo 型 Python CLI パターン（仕様書駆動）
+
+**ghrepo のプログラム構造**を、サブコマンドを持つ Python CLI の canonical パターンとして使う。
+
+```
+エントリーポイント層  ghrepo.py / main() — Clix で引数パース → ディスパッチ
+CLI定義層           Clix (clix.py)      — argparse 定義のみ、ロジックなし
+コマンド実行層      CommandXxx          — yklibpy.command.Command 継承
+設定・ストレージ層  AppConfigx + yklibpy.AppStore/Storex
+```
+
+**スキル連携（仕様書駆動フロー）**:
+
+```
+docs/req/idea/*.md  (アイデアレベルの要件)
+    ↓ python-cli-req-to-external-spec スキル
+docs/req/detail/*.md (詳細要件)
+    ↓ python-cli-external-spec スキル  (ghrepo-external-spec)
+外部仕様書 (docs/spec/external.md)
+    ↓ python-cli-internal-spec スキル
+内部仕様書 (docs/spec/internal.md)
+```
+
+- **採用文脈**: ghrepo・gistx・gitreporemote・calibrex・filelist 等、Python CLI プロジェクト全般
+- **適用条件**: サブコマンドを持つ CLI、yklibpy を共通基盤として使うプロジェクト
+- **出典**: [[ghrepo]], [[gistx]], [[gitreporemote]], `reference/Inbox/仕様書駆動の取り組み.md`（2026-06-04）
+
 ## プロジェクト実装言語別分類（2026-04-11 時点）
 
 ### Ruby 実装
