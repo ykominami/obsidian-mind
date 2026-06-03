@@ -41,6 +41,17 @@ Recurring patterns discovered across work.
 - **適用条件**: コードベースが Claude のコンテキストウィンドウに収まる規模、または対象モジュールを絞れる場合
 - **出典**: [[work/active/TECS開発]], [[tecsgen外部仕様]], [[tecsgen内部仕様]], git `0258ec8`
 
+## vault再分類ワークフロー
+
+大量ファイルの `reference/` → サブフォルダへの再分類を行うとき。
+
+- **Obsidian内で移動**: Obsidian のファイルエクスプローラーでフォルダごと移動すると、wikilink が自動更新される（ファイルシステム直操作は wikilink を壊す）
+- **コミット前確認**: `git status` でリネーム追跡（`R`）が検出されていれば git が移動を認識している。`D + ??` ペアになっている場合は `git mv` 相当として扱われず履歴が切れるため、`git add -u` と `git add <new>` の両方を実行してステージングする
+- **wikilink のパス除去**: 移動後は `[[reference/Note/X]]` → `[[X]]` に正規化（Obsidian は note 名だけで解決するため）。brag doc や competency の Related などに残った旧パス付きリンクを検索して修正する
+- **.gitignore 見直し**: 新しいプラグインフォルダ（`.obsidian/plugins/xxx/`）は plugin バイナリなので除外対象。ユーザコンテンツフォルダ（`copilot/` 等）は追跡対象
+- **適用例**: `reference/` 77件 → `Note/` 13サブフォルダへ再分類（2026-06-04）。git rename として正しくトラック済み
+- **出典**: git `chore: vault再編成`, [[perf/brag/Q2 2026]]
+
 ## Claude サブエージェント活用パターン
 
 - **文章チェック用サブエージェント** — コーディング時の linter 的に使う発想。レビュー・校正を並列エージェントに委譲することで品質ゲートを自動化できる（出典: [[reference/Inbox/AIAU-雑談(ai)]]）
