@@ -30,6 +30,7 @@ node_modules/
 # AI / IDE tool directories (local, not vault content)
 .agents/
 .antigravitycli/
+.claudian/
 .cursor/
 .junie/
 .kilocode/
