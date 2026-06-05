@@ -19,6 +19,7 @@ Persistent context and knowledge retained across sessions. Each topic lives in i
 
 ## Recent Context
 
+- 2026-06-06: wrap-up — 2026-06-04/05セッション。①vault大規模再編成: reference/ 77件 → Note/ 13サブフォルダに再分類（4e795e2）。②ghrepo/gistx/gitreporemote の3ワークノートにArchitecture詳細追記（c452e02）。③Patterns.md に2パターン追加（vault再分類ワークフロー・ghrepo型Python CLIパターン）。④LLM-wiki MEMO大幅拡張。⑤Copilotプラグイン+カスタムプロンプト14件統合。⑥htmlparser命名調査ノート整理・Kindle clipping 3件追加。brag 3件追加。未解消（継続）: Collaboration/Feedbackコンピテンシーエビデンス未記録。
 - 2026-05-31: standup後作業 — ①Inbox 6件処理（nlm-CLI/Obsidian-AI連携昇格・NotebookLMワークフロー追記・3件削除）、②Clippings 4件コミット、③.obsidian/daily-notes.json を.gitignore追加。④TECS wiki — tecsgen/trunk内部ドキュメント6件ingest・compile_wiki.py実行（source-summary 6件新規・concept 45件更新・backlink 43件修正・ソース88→94件）。git `2e28259`。未解消（継続）: Collaboration/Deliveryコンピテンシーノート未作成（12+セッション）。
 - 2026-05-29: wrap-up — 2026-05-28/29セッション。TECS wiki RST 9件ingest完了（ソース57件に拡張）。Inbox 1件処理（NotebookLM活用術→reference/Note/昇格）。templates/from-NotebookLM.md を正規テンプレートとして追跡開始。.gitignore に 2hop-links-plus 追加。brag追記3件（Inbox15件処理・TECS wiki 9件ingest・Patterns.md 2パターン）。未解消（継続）: ①Collaboration/Deliveryコンピテンシーノート未作成（10+セッション）、②TECS wiki コンパイル未実施（9件以上未コンパイルソース）
 - 2026-05-27: wrap-up — セッション内作業なし（即wrap-up）。未追跡ファイル: Clippings 2件（Karpathy LLM wiki記事・ベクトルDB不要記事）、reference/Inbox 2件（AIAU-雑談・llm-wiki に必要なもの）、デザイン系3ディレクトリ（テンプレートサンプル、.gitignore推奨）。brag-spotter: semantic search CLIリファレンス・YouTube Bases 3本・LLM wikiメモリ研究の3件未記録→Q2 brag追記。未解消（継続10セッション以上）: ①Collaboration/Deliveryコンピテンシーノート未作成、②work/1-1/空、③デザイン系ディレクトリ・プロジェクト/ 未追跡。
