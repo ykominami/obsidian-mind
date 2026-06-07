@@ -10,5 +10,6 @@
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "folder",
-  "newFileFolderPath": "reference/Inbox"
+  "newFileFolderPath": "reference/Note/_inbox",
+  "attachmentFolderPath": "./"
 }
