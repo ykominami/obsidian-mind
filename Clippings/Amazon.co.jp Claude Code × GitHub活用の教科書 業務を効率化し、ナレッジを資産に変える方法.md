@@ -16,6 +16,7 @@ tags:
 ---
 
 【Claude Code × GitHub活用の教科書：業務を効率化し、ナレッジを資産に変える方法】  
+ [[Claude Code × GitHub活用の教科書：業務を効率化し、ナレッジを資産に変える方法]]
   
 本書は「Claude Code 完全攻略シリーズ」の4巻目です。  
   
