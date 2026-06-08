@@ -19,6 +19,7 @@ Persistent context and knowledge retained across sessions. Each topic lives in i
 
 ## Recent Context
 
+- 2026-06-09: TECS wiki クエリ（呼び口配列・受け口配列の書き方 — tecs/tecs-0 両wiki）。wiki log更新のみ、vault ノート未作成。⚠️未解消: TECS仕様書(tecs wiki版)-受け口配列の書き方を教えて.md 未作成・TECS仕様書 22件 untracked（未コミット）・TECS-MEMO/_inbox フォルダ untracked・命名衝突フォルダ4件継続。
 - 2026-06-08: TECS wiki クエリ集中セッション（tecs + tecs-0 両wiki）。コンポーネント・セル・セルタイプ・受け口・呼び口・シグニチャを体系的にクエリ。CDL シグニチャ記述例を両wiki ingest + compile + lint。vault: TECS仕様書(tecs wiki版)/シグニチャ ファイル名余分スペース修正。⚠️未解消: `_inbox/TECS仕様書-シグニチャとは何か.md`（既存ファイルの改善版）処理待ち・deleted files未コミット継続・命名衝突フォルダ4件継続。
 - 2026-06-07: セッション内作業なし（wrap-up + standup のみ）。Obsidian経由でユーザが大規模再編成: Note/ 85件 → reference/Note/ 移動。⚠️ 命名衝突フォルダ4件残存（Kindle 1/SHIFT-AI 1/VCS-PROJECT-PKGMGR 1/YouTube 1）— 次セッションで手動マージ要。claudianプラグイン削除。templates/読書.md追加。reference/Inbox/ 3件追加。
 - 2026-06-06: wrap-up — 2026-06-04/05セッション。①vault大規模再編成: reference/ 77件 → Note/ 13サブフォルダに再分類（4e795e2）。②ghrepo/gistx/gitreporemote の3ワークノートにArchitecture詳細追記（c452e02）。③Patterns.md に2パターン追加（vault再分類ワークフロー・ghrepo型Python CLIパターン）。④LLM-wiki MEMO大幅拡張。⑤Copilotプラグイン+カスタムプロンプト14件統合。⑥htmlparser命名調査ノート整理・Kindle clipping 3件追加。brag 3件追加。未解消（継続）: Collaboration/Feedbackコンピテンシーエビデンス未記録。
