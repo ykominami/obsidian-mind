@@ -6,6 +6,11 @@ kindle-highlightsCount: 51
 kindle-asin: B00TY61DPM
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/91LZpq144pL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 51件ハイライト: 文藝春秋SPECIAL 2015年春号 [雑誌]"
+tags:
+  - kindle
+  - clipping
 ---
 # 文藝春秋SPECIAL 2015年春号 (雑誌)
 ## Metadata

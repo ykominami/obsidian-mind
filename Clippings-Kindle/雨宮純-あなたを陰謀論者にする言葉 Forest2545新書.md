@@ -6,6 +6,11 @@ kindle-highlightsCount: 27
 kindle-asin: B09JB5XBZS
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/816Rh9GmgeL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 27件ハイライト: あなたを陰謀論者にする言葉 Forest2545新書"
+tags:
+  - kindle
+  - clipping
 ---
 # あなたを陰謀論者にする言葉 Forest2545新書
 ## Metadata

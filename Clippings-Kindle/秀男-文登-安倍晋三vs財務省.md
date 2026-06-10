@@ -6,6 +6,11 @@ kindle-highlightsCount: 15
 kindle-asin: B0CMPSWFZM
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81jiPFTci4L._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 15件ハイライト: 安倍晋三vs財務省 (扶桑社ＢＯＯＫＳ)"
+tags:
+  - kindle
+  - clipping
 ---
 # 安倍晋三vs財務省
 ## Metadata

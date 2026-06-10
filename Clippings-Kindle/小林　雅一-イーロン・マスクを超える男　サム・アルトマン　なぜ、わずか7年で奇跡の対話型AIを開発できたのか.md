@@ -6,6 +6,11 @@ kindle-highlightsCount: 1
 kindle-asin: B0D9JJGLNB
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81hGHyZG4pL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 1件ハイライト: イーロン・マスクを超える男　サム・アルトマン　なぜ、わずか7年で奇跡の対話型AIを開発できたのか"
+tags:
+  - kindle
+  - clipping
 ---
 # イーロン・マスクを超える男　サム・アルトマン　なぜ、わずか7年で奇跡の対話型AIを開発できたのか
 ## Metadata

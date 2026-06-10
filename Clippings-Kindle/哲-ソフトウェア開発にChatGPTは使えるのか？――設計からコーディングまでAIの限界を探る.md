@@ -6,6 +6,11 @@ kindle-highlightsCount: 13
 kindle-asin: B0C9L3DH5S
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/71Su+FUVGhL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 13件ハイライト: ソフトウェア開発にChatGPTは使えるのか？――設計からコーディングまでAIの限界を探る"
+tags:
+  - kindle
+  - clipping
 ---
 # ソフトウェア開発にChatGPTは使えるのか？――設計からコーディングまでAIの限界を探る
 ## Metadata

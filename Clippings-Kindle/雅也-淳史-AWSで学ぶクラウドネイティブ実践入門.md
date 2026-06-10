@@ -6,6 +6,11 @@ kindle-highlightsCount: 4
 kindle-asin: B08MT9L4MY
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81GDMpj+FzL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 4件ハイライト: AWSで学ぶクラウドネイティブ実践入門 (技術の泉シリーズ（NextPublishing）)"
+tags:
+  - kindle
+  - clipping
 ---
 # AWSで学ぶクラウドネイティブ実践入門
 ## Metadata

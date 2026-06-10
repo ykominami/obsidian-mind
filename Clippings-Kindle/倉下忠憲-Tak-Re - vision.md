@@ -6,6 +6,11 @@ kindle-highlightsCount: 110
 kindle-asin: B09PKZWS5G
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/51wlCgrOz3L._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 110件ハイライト: Re:vision: タスクリストとアウトライン"
+tags:
+  - kindle
+  - clipping
 ---
 # Re:vision
 ## Metadata

@@ -6,6 +6,11 @@ kindle-highlightsCount: 29
 kindle-asin: B0D3TY6JTX
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81fWj9qH0fL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 29件ハイライト: Google vs Microsoft　生成AIをめぐる攻防 (日本経済新聞出版)"
+tags:
+  - kindle
+  - clipping
 ---
 # Google vs Microsoft　生成AIをめぐる攻防
 ## Metadata

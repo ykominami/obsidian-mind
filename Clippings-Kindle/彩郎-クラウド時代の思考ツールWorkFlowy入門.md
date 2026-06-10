@@ -6,6 +6,11 @@ kindle-highlightsCount: 57
 kindle-asin: B01AXRCDU4
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/71oFZ26+4cL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 57件ハイライト: クラウド時代の思考ツールWorkFlowy入門 (OnDeck Books（NextPublishing）)"
+tags:
+  - kindle
+  - clipping
 ---
 # クラウド時代の思考ツールWorkFlowy入門
 ## Metadata

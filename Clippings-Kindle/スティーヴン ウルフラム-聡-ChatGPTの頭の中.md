@@ -6,6 +6,11 @@ kindle-highlightsCount: 98
 kindle-asin: B0CBLZ2PXQ
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/61+g-B-TJxL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 98件ハイライト: ChatGPTの頭の中 (ハヤカワ新書)"
+tags:
+  - kindle
+  - clipping
 ---
 # ChatGPTの頭の中
 ## Metadata

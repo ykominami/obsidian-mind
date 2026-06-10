@@ -6,6 +6,11 @@ kindle-highlightsCount: 3
 kindle-asin: B0CP741RX8
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/71qs2MgKWsL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 3件ハイライト: systemdの思想と機能　Linuxを支えるシステム管理のためのソフトウェアスイート Software Design plus"
+tags:
+  - kindle
+  - clipping
 ---
 # systemdの思想と機能　Linuxを支えるシステム管理のためのソフトウェアスイート Software Design plus
 ## Metadata

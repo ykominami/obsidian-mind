@@ -6,6 +6,11 @@ kindle-highlightsCount: 3
 kindle-asin: B00SF6JN4K
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/91U02LGgJOL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 3件ハイライト: Effective Ruby"
+tags:
+  - kindle
+  - clipping
 ---
 # Effective Ruby
 ## Metadata

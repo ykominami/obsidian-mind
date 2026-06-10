@@ -8,6 +8,11 @@ kindle-highlightsCount: 1
 kindle-asin: B0DZFZZWXV
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/813Fr2XyklL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 1件ハイライト: Pythonで学ぶ強化学習！ゼロからはじめるAI＆機械学習 超入門: マンガと図解付きで初心者でもわかるAIの仕組みと学習方法【人工知能/ディープラーニング/自動運転/ゲームAI/教養】 超入門シリーズ"
+tags:
+  - kindle
+  - clipping
 ---
 # Pythonで学ぶ強化学習！ゼロからはじめるAI＆機械学習 超入門
 ## Metadata

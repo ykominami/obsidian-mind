@@ -8,6 +8,11 @@ kindle-highlightsCount: 1
 kindle-asin: B0BX3674CJ
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/613tg5-D0oL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 1件ハイライト: Excel×ChatGPTでビジネスが加速する！AI仕事術: 「○○を教えて」だけじゃない！仕事に役立つ50の活用事例 ChatGPTでビジネスが加速するAI仕事術 (エクセル兄さん出版)"
+tags:
+  - kindle
+  - clipping
 ---
 # Excel×ChatGPTでビジネスが加速する！AI仕事術
 ## Metadata

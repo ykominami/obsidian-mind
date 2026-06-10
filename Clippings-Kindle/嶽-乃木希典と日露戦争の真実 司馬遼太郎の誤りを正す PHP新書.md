@@ -6,6 +6,11 @@ kindle-highlightsCount: 116
 kindle-asin: B01GPVJ4S6
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/91gwa7JXyZL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 116件ハイライト: 乃木希典と日露戦争の真実 司馬遼太郎の誤りを正す PHP新書"
+tags:
+  - kindle
+  - clipping
 ---
 # 乃木希典と日露戦争の真実 司馬遼太郎の誤りを正す PHP新書
 ## Metadata

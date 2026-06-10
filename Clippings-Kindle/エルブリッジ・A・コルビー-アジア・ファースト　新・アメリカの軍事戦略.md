@@ -6,6 +6,11 @@ kindle-highlightsCount: 5
 kindle-asin: B0DK2Z1QZS
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/61TTgcqqTZL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 5件ハイライト: アジア・ファースト　新・アメリカの軍事戦略 (文春新書)"
+tags:
+  - kindle
+  - clipping
 ---
 # アジア・ファースト　新・アメリカの軍事戦略
 ## Metadata

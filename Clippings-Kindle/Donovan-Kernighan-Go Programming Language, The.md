@@ -8,6 +8,11 @@ kindle-highlightsCount: 1
 kindle-asin: B0184N7WWS
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/71poU-tpxmL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 1件ハイライト: Go Programming Language, The (Addison-Wesley Professional Computing Series) (English Edition)"
+tags:
+  - kindle
+  - clipping
 ---
 # Go Programming Language, The
 ## Metadata

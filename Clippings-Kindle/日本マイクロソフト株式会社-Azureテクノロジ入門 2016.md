@@ -6,6 +6,11 @@ kindle-highlightsCount: 1
 kindle-asin: B06X91FMZG
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/71pV1IT-dtL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 1件ハイライト: Azureテクノロジ入門 2016"
+tags:
+  - kindle
+  - clipping
 ---
 # Azureテクノロジ入門 2016
 ## Metadata

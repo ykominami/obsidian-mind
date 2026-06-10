@@ -6,6 +6,11 @@ kindle-highlightsCount: 47
 kindle-asin: B0BZHTJ75M
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81Kwap4xelL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 47件ハイライト: 設計から学ぶFirebase実践ガイド"
+tags:
+  - kindle
+  - clipping
 ---
 # 設計から学ぶFirebase実践ガイド
 ## Metadata

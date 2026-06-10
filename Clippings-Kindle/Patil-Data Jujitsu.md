@@ -6,6 +6,11 @@ kindle-highlightsCount: 19
 kindle-asin: B008HMN5BE
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81oK6pMIs6L._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 19件ハイライト: Data Jujitsu: The Art of Turning Data into Product (English Edition)"
+tags:
+  - kindle
+  - clipping
 ---
 # Data Jujitsu
 ## Metadata

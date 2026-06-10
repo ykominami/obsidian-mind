@@ -6,6 +6,11 @@ kindle-highlightsCount: 56
 kindle-asin: B09MWG9F3Y
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81-84gkz93L._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 56件ハイライト: 書き出す・見直す「アウトプット思考」を通じてGTDを実践するiPad手帳術: 文章を書き、考える人のための「iPad」活用術 情報整理大全"
+tags:
+  - kindle
+  - clipping
 ---
 # 書き出す・見直す「アウトプット思考」を通じてGTDを実践するiPad手帳術
 ## Metadata

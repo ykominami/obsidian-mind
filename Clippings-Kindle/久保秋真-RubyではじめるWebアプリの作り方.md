@@ -6,6 +6,11 @@ kindle-highlightsCount: 1
 kindle-asin: B09LVBT9ZD
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/91uvNH1Xj2L._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 1件ハイライト: RubyではじめるWebアプリの作り方"
+tags:
+  - kindle
+  - clipping
 ---
 # RubyではじめるWebアプリの作り方
 ## Metadata

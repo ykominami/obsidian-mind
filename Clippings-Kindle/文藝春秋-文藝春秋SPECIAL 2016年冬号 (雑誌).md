@@ -6,6 +6,11 @@ kindle-highlightsCount: 4
 kindle-asin: B018G34M10
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81JT1rV0F5L._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 4件ハイライト: 文藝春秋SPECIAL 2016年冬号 [雑誌]"
+tags:
+  - kindle
+  - clipping
 ---
 # 文藝春秋SPECIAL 2016年冬号 (雑誌)
 ## Metadata

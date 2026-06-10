@@ -6,6 +6,11 @@ kindle-highlightsCount: 19
 kindle-asin: B06XJWZMMW
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/91FGuM07g9L._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 19件ハイライト: 別冊NHK100分de名著　集中講義　大乗仏教　こうしてブッダの教えは変容した"
+tags:
+  - kindle
+  - clipping
 ---
 # 別冊NHK100分de名著　集中講義　大乗仏教　こうしてブッダの教えは変容した
 ## Metadata

@@ -6,6 +6,11 @@ kindle-highlightsCount: 2
 kindle-asin: B00E4U62PO
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81L-rSgJIrL._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 2件ハイライト: あなたを天才にするスマートノート・電子版プラス"
+tags:
+  - kindle
+  - clipping
 ---
 # あなたを天才にするスマートノート・電子版プラス
 ## Metadata

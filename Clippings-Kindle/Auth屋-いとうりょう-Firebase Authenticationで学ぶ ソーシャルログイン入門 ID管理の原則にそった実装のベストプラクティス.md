@@ -6,6 +6,11 @@ kindle-highlightsCount: 3
 kindle-asin: B0BJCJJW8W
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/91Zr-DrDq7L._SX1024.jpg'
+date: 2026-06-03
+description: "Kindle 3件ハイライト: Firebase Authenticationで学ぶ ソーシャルログイン入門 ID管理の原則にそった実装のベストプラクティス"
+tags:
+  - kindle
+  - clipping
 ---
 # Firebase Authenticationで学ぶ ソーシャルログイン入門 ID管理の原則にそった実装のベストプラクティス
 ## Metadata
