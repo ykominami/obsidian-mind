@@ -6,8 +6,10 @@ kindle-highlightsCount: 3
 kindle-asin: B0CP741RX8
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/71qs2MgKWsL._SX1024.jpg'
-date: 2026-06-03
-description: "Kindle 3件ハイライト: systemdの思想と機能　Linuxを支えるシステム管理のためのソフトウェアスイート Software Design plus"
+date: 2026-06-03T00:00:00.000Z
+description: >-
+  Kindle 3件ハイライト: systemdの思想と機能　Linuxを支えるシステム管理のためのソフトウェアスイート Software Design
+  plus
 tags:
   - kindle
   - clipping
@@ -20,6 +22,16 @@ tags:
 * [Kindle link](kindle://book?action=open&asin=B0CP741RX8)
 
 ## Highlights
+それぞれのディレクトリにunit fileが格納され、同じファイル名のファイルがあれば優先度が高いディレクトリにあるunit fileが使われます。このしくみを利用して、管理者が作成したunit fileでディストリビューションのパッケージが提供するunit fileを置き換えることができます。 — location: [669](kindle://book?action=open&asin=B0CP741RX8&location=669) ^ref-3166
+
+---
+unit file全体を置き換えるだけでなく、一部だけを追加するドロップインのしくみがあります。たとえば、foo.serviceに記述されている内容に一部追加するには、foo.service.dというディレクトリを作成し、その中に、追加したい部分だけが含まれた部分的なunit fileを.confという拡張子を付けて配置します。 — location: [678](kindle://book?action=open&asin=B0CP741RX8&location=678) ^ref-61679
+
+---
+unit fileですでに値が指定されているものをドロップインでもう一度指定した場合の動作はディレクティブにより異なるので、注意が必要です。 Wants や After のような依存関係／前後関係はドロップインで操作できません。 — location: [684](kindle://book?action=open&asin=B0CP741RX8&location=684) ^ref-19220
+
+---
+
 それぞれのディレクトリにunit fileが格納され、同じファイル名のファイルがあれば優先度が高いディレクトリにあるunit fileが使われます。このしくみを利用して、管理者が作成したunit fileでディストリビューションのパッケージが提供するunit fileを置き換えることができます。 — location: [669](kindle://book?action=open&asin=B0CP741RX8&location=669) ^ref-3166
 
 ---

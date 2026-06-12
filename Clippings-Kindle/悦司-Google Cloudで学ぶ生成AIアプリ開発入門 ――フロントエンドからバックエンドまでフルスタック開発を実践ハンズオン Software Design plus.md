@@ -8,8 +8,10 @@ kindle-highlightsCount: 1
 kindle-asin: B0D21PRMF5
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/71SACK6JTHL._SX1024.jpg'
-date: 2026-06-03
-description: "Kindle 1件ハイライト: Google Cloudで学ぶ生成AIアプリ開発入門 ――フロントエンドからバックエンドまでフルスタック開発を実践ハンズオン Software Design plus"
+date: 2026-06-03T00:00:00.000Z
+description: >-
+  Kindle 1件ハイライト: Google Cloudで学ぶ生成AIアプリ開発入門 ――フロントエンドからバックエンドまでフルスタック開発を実践ハンズオン
+  Software Design plus
 tags:
   - kindle
   - clipping
@@ -22,6 +24,10 @@ tags:
 * [Kindle link](kindle://book?action=open&asin=B0D21PRMF5)
 
 ## Highlights
+https://github.com/google-cloud-japan/sa-ml-workshop — location: [74](kindle://book?action=open&asin=B0D21PRMF5&location=74) ^ref-62376
+
+---
+
 https://github.com/google-cloud-japan/sa-ml-workshop — location: [74](kindle://book?action=open&asin=B0D21PRMF5&location=74) ^ref-62376
 
 ---

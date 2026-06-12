@@ -6,8 +6,10 @@ kindle-highlightsCount: 1
 kindle-asin: B08BXWJWDD
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81TusfM4KvL._SX1024.jpg'
-date: 2026-06-03
-description: "Kindle 1件ハイライト: これで読書ノートが続く！本を探す・読む・活かすを効率的にする「Kindle×Evernote読書術」 Kindleで学ぶ 読書術"
+date: 2026-06-03T00:00:00.000Z
+description: >-
+  Kindle 1件ハイライト: これで読書ノートが続く！本を探す・読む・活かすを効率的にする「Kindle×Evernote読書術」 Kindleで学ぶ
+  読書術
 tags:
   - kindle
   - clipping
@@ -20,6 +22,10 @@ tags:
 * [Kindle link](kindle://book?action=open&asin=B08BXWJWDD)
 
 ## Highlights
+https://yoshihisamurakami.github.io/kindleunlimited-search/ — location: [186](kindle://book?action=open&asin=B08BXWJWDD&location=186) ^ref-34052
+
+---
+
 https://yoshihisamurakami.github.io/kindleunlimited-search/ — location: [186](kindle://book?action=open&asin=B08BXWJWDD&location=186) ^ref-34052
 
 ---

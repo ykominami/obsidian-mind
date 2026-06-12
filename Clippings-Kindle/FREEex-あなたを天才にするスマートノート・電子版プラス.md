@@ -6,8 +6,8 @@ kindle-highlightsCount: 2
 kindle-asin: B00E4U62PO
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81L-rSgJIrL._SX1024.jpg'
-date: 2026-06-03
-description: "Kindle 2件ハイライト: あなたを天才にするスマートノート・電子版プラス"
+date: 2026-06-03T00:00:00.000Z
+description: 'Kindle 2件ハイライト: あなたを天才にするスマートノート・電子版プラス'
 tags:
   - kindle
   - clipping
@@ -20,6 +20,13 @@ tags:
 * [Kindle link](kindle://book?action=open&asin=B00E4U62PO)
 
 ## Highlights
+「天才」とは、以下の３つの能力を兼ね備えた人です。 １） 発想力 ２） 表現力 ３） 論理力 — location: [159](kindle://book?action=open&asin=B00E4U62PO&location=159) ^ref-4575
+
+---
+このそれぞれに関して高い能力を持ち、それが強い主体性によって１つの人格の中にまとまっている状態。 　これを「天才」と言います。 — location: [161](kindle://book?action=open&asin=B00E4U62PO&location=161) ^ref-40974
+
+---
+
 「天才」とは、以下の３つの能力を兼ね備えた人です。 １） 発想力 ２） 表現力 ３） 論理力 — location: [159](kindle://book?action=open&asin=B00E4U62PO&location=159) ^ref-4575
 
 ---

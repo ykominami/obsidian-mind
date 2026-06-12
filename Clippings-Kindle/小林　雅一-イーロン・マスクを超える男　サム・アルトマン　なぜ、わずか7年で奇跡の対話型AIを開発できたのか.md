@@ -6,8 +6,8 @@ kindle-highlightsCount: 1
 kindle-asin: B0D9JJGLNB
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81hGHyZG4pL._SX1024.jpg'
-date: 2026-06-03
-description: "Kindle 1件ハイライト: イーロン・マスクを超える男　サム・アルトマン　なぜ、わずか7年で奇跡の対話型AIを開発できたのか"
+date: 2026-06-03T00:00:00.000Z
+description: 'Kindle 1件ハイライト: イーロン・マスクを超える男　サム・アルトマン　なぜ、わずか7年で奇跡の対話型AIを開発できたのか'
 tags:
   - kindle
   - clipping
@@ -20,6 +20,10 @@ tags:
 * [Kindle link](kindle://book?action=open&asin=B0D9JJGLNB)
 
 ## Highlights
+私はこの経験によって、リーダーがいつチームに介入して、いつその自信を回復させるかについて重要な教訓を学んだ。リーダーに課された最大の役目は、自分が率いるチームの自信を育むことだと私は思う」と — location: [1447](kindle://book?action=open&asin=B0D9JJGLNB&location=1447) ^ref-22570
+
+---
+
 私はこの経験によって、リーダーがいつチームに介入して、いつその自信を回復させるかについて重要な教訓を学んだ。リーダーに課された最大の役目は、自分が率いるチームの自信を育むことだと私は思う」と — location: [1447](kindle://book?action=open&asin=B0D9JJGLNB&location=1447) ^ref-22570
 
 ---

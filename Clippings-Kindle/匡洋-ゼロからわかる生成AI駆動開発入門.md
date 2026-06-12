@@ -8,8 +8,10 @@ kindle-highlightsCount: 1
 kindle-asin: B0DTN65M3Q
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81qh4nvu99L._SX1024.jpg'
-date: 2026-06-03
-description: "Kindle 1件ハイライト: ゼロからわかる生成AI駆動開発入門: ハンズオンで学ぶ Bolt.new, ChatGPT, Replit Agent, Cursor, GEAR.indigo, Feloなど最新ツールを活用した最先端の開発アプローチ"
+date: 2026-06-03T00:00:00.000Z
+description: >-
+  Kindle 1件ハイライト: ゼロからわかる生成AI駆動開発入門: ハンズオンで学ぶ Bolt.new, ChatGPT, Replit Agent,
+  Cursor, GEAR.indigo, Feloなど最新ツールを活用した最先端の開発アプローチ
 tags:
   - kindle
   - clipping
@@ -22,6 +24,10 @@ tags:
 * [Kindle link](kindle://book?action=open&asin=B0DTN65M3Q)
 
 ## Highlights
+な場合は、さらに深いヒアリングをして要件を明確にし ヒアリングをする相⼿は⾮エンジニアで専⾨的なことやシステムに必要 なこと不明 点や必要な情報はこちらから提供するので都度聞いてください — location: [193](kindle://book?action=open&asin=B0DTN65M3Q&location=193) ^ref-47293
+
+---
+
 な場合は、さらに深いヒアリングをして要件を明確にし ヒアリングをする相⼿は⾮エンジニアで専⾨的なことやシステムに必要 なこと不明 点や必要な情報はこちらから提供するので都度聞いてください — location: [193](kindle://book?action=open&asin=B0DTN65M3Q&location=193) ^ref-47293
 
 ---

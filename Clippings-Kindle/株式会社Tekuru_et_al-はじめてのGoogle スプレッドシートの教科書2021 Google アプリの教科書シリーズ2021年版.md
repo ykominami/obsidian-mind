@@ -6,8 +6,8 @@ kindle-highlightsCount: 1
 kindle-asin: B09B5YGHX2
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/71hZ1v5E-QL._SX1024.jpg'
-date: 2026-06-03
-description: "Kindle 1件ハイライト: はじめてのGoogle スプレッドシートの教科書2021 Google アプリの教科書シリーズ2021年版"
+date: 2026-06-03T00:00:00.000Z
+description: 'Kindle 1件ハイライト: はじめてのGoogle スプレッドシートの教科書2021 Google アプリの教科書シリーズ2021年版'
 tags:
   - kindle
   - clipping
@@ -20,6 +20,10 @@ tags:
 * [Kindle link](kindle://book?action=open&asin=B09B5YGHX2)
 
 ## Highlights
+スプレッドシート作成する時には、まず最初に「このシートの目的」というシートの名前に変更して、編集しているファイルの目的についてまとめることをオススメ — location: [582](kindle://book?action=open&asin=B09B5YGHX2&location=582) ^ref-61132
+
+---
+
 スプレッドシート作成する時には、まず最初に「このシートの目的」というシートの名前に変更して、編集しているファイルの目的についてまとめることをオススメ — location: [582](kindle://book?action=open&asin=B09B5YGHX2&location=582) ^ref-61132
 
 ---

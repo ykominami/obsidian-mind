@@ -6,8 +6,10 @@ kindle-highlightsCount: 1
 kindle-asin: B07BMWYLBH
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/81PdhM3CneL._SX1024.jpg'
-date: 2026-06-03
-description: "Kindle 1件ハイライト: TypeScriptで作るシングルページアプリケーション 技術の泉シリーズ (技術の泉シリーズ（NextPublishing）)"
+date: 2026-06-03T00:00:00.000Z
+description: >-
+  Kindle 1件ハイライト: TypeScriptで作るシングルページアプリケーション 技術の泉シリーズ
+  (技術の泉シリーズ（NextPublishing）)
 tags:
   - kindle
   - clipping
@@ -21,6 +23,10 @@ tags:
 * [Kindle link](kindle://book?action=open&asin=B07BMWYLBH)
 
 ## Highlights
+create — location: [240](kindle://book?action=open&asin=B07BMWYLBH&location=240) ^ref-39030
+
+---
+
 create — location: [240](kindle://book?action=open&asin=B07BMWYLBH&location=240) ^ref-39030
 
 ---

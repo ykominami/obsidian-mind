@@ -6,8 +6,8 @@ kindle-highlightsCount: 1
 kindle-asin: B07CQLGGP9
 kindle-lastAnnotatedDate: Invalid date
 kindle-bookImageUrl: 'https://m.media-amazon.com/images/I/9179N5XlS1L._SX1024.jpg'
-date: 2026-06-03
-description: "Kindle 1件ハイライト: 速習webpack 速習シリーズ"
+date: 2026-06-03T00:00:00.000Z
+description: 'Kindle 1件ハイライト: 速習webpack 速習シリーズ'
 tags:
   - kindle
   - clipping
@@ -20,6 +20,10 @@ tags:
 * [Kindle link](kindle://book?action=open&asin=B07CQLGGP9)
 
 ## Highlights
+npm — location: [811](kindle://book?action=open&asin=B07CQLGGP9&location=811) ^ref-39244
+
+---
+
 npm — location: [811](kindle://book?action=open&asin=B07CQLGGP9&location=811) ^ref-39244
 
 ---
