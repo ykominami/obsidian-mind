@@ -19,6 +19,7 @@ Persistent context and knowledge retained across sessions. Each topic lives in i
 
 ## Recent Context
 
+- 2026-06-13: セッション内作業なし（即wrap-up）。未コミット: `.obsidian/community-plugins.json`（obsidian-tagfolder + tag-wrangler 追加）・`.obsidian/core-plugins.json`（daily-notes 無効化）・Clippings-Kindle ~95件（Obsidianがdate/descriptionフォーマット自動変換 + CRLF→LF）。brag-spotter発見2件→Q2 2026.md 追記済: ①Clippings-Kindle frontmatterスクリプト実装②RTK 3環境統合。Obsidian がClippings-Kindleを開く際に最後のハイライトを重複追記するバグ確認（24892ac以降）。⚠️未解消（継続）: TECS仕様書 22件 untracked・TECS-MEMO/_inbox untracked・命名衝突フォルダ4件・Collaboration/Feedbackコンピテンシーエビデンス未記録。
 - 2026-06-09: TECS wiki クエリ（呼び口配列・受け口配列の書き方 — tecs/tecs-0 両wiki）。wiki log更新のみ、vault ノート未作成。⚠️未解消: TECS仕様書(tecs wiki版)-受け口配列の書き方を教えて.md 未作成・TECS仕様書 22件 untracked（未コミット）・TECS-MEMO/_inbox フォルダ untracked・命名衝突フォルダ4件継続。
 - 2026-06-08: TECS wiki クエリ集中セッション（tecs + tecs-0 両wiki）。コンポーネント・セル・セルタイプ・受け口・呼び口・シグニチャを体系的にクエリ。CDL シグニチャ記述例を両wiki ingest + compile + lint。vault: TECS仕様書(tecs wiki版)/シグニチャ ファイル名余分スペース修正。⚠️未解消: `_inbox/TECS仕様書-シグニチャとは何か.md`（既存ファイルの改善版）処理待ち・deleted files未コミット継続・命名衝突フォルダ4件継続。
 - 2026-06-07: セッション内作業なし（wrap-up + standup のみ）。Obsidian経由でユーザが大規模再編成: Note/ 85件 → reference/Note/ 移動。⚠️ 命名衝突フォルダ4件残存（Kindle 1/SHIFT-AI 1/VCS-PROJECT-PKGMGR 1/YouTube 1）— 次セッションで手動マージ要。claudianプラグイン削除。templates/読書.md追加。reference/Inbox/ 3件追加。
