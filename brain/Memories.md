@@ -19,6 +19,7 @@ Persistent context and knowledge retained across sessions. Each topic lives in i
 
 ## Recent Context
 
+- 2026-06-15: standup + wrap-up のみ（読み取り専用セッション）。brag-spotter発見3件→Q2 2026.md 修正: ①TECS仕様書13件・referenceInbox10件コミット（c9eebbc）未キャプチャ→Impact追加②Clippings-Kindle date ISO統一（8d75459）未キャプチャ→Technical Growth追加③Competency Evidenceナレッジマネジメント欄のtecs-1記述を「品質診断」→「全修正完了・lint Critical 0件」に更新。継続未解消: `_inbox/2026-06-12-tecs-license.md` 未処理・Collaboration/Feedbackコンピテンシーエビデンス未記録。
 - 2026-06-14: wiki:lint --wiki tecs-1 実行・全修正完了。lint発見: ①全17 wiki記事が `type`/`description`→修正済（`category`/`summary` に統一）②raw/articles/_index.md 12/86→全86件再構築③raw/_index.md カウント 87→86修正④uncovered source: 2026-06-12-tecs-license.md（未対応・継続）。vault変更なし（tecs-1 wiki側のみ更新）。
 - 2026-06-13: セッション内作業なし（即wrap-up）。未コミット: `.obsidian/community-plugins.json`（obsidian-tagfolder + tag-wrangler 追加）・`.obsidian/core-plugins.json`（daily-notes 無効化）・Clippings-Kindle ~95件（Obsidianがdate/descriptionフォーマット自動変換 + CRLF→LF）。brag-spotter発見2件→Q2 2026.md 追記済: ①Clippings-Kindle frontmatterスクリプト実装②RTK 3環境統合。Obsidian がClippings-Kindleを開く際に最後のハイライトを重複追記するバグ確認（24892ac以降）。⚠️未解消（継続）: TECS仕様書 22件 untracked・TECS-MEMO/_inbox untracked・命名衝突フォルダ4件・Collaboration/Feedbackコンピテンシーエビデンス未記録。
 - 2026-06-09: TECS wiki クエリ（呼び口配列・受け口配列の書き方 — tecs/tecs-0 両wiki）。wiki log更新のみ、vault ノート未作成。⚠️未解消: TECS仕様書(tecs wiki版)-受け口配列の書き方を教えて.md 未作成・TECS仕様書 22件 untracked（未コミット）・TECS-MEMO/_inbox フォルダ untracked・命名衝突フォルダ4件継続。
