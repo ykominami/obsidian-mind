@@ -95,6 +95,12 @@ aliases:
 - Rubyライブラリ(ykutils)
 - Rubyライブラリ(ykxutils)
 
+### AIツールチェーンコスト最適化
+- トークン削減（RTK — Rust Token Killer）
+- コンテキスト圧縮（headroom MCP — compress/retrieve/status）
+- セッション横断記憶（agentmemory — Docker + iii-engine + Node.js）
+- Claude Code コスト運用（モデル選択・CLAUDE.md設計・作業プロセス最適化）
+
 ## Goals
 
 ### Short-term (This Quarter)
